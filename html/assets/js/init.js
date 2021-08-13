@@ -9,7 +9,7 @@ $(document).ready(function(){
       $("#dob").html(event.data.information.dob);
       $("#nationality").html(event.data.information.nationality);
       } 
-        if ( sex == '1' ) {
+        if ( sex == '0' ) {
           $('#id-card').show();
           $('#sex').text('male');
         } else {
