@@ -12,7 +12,8 @@ $(document).ready(function(){
         if ( sex == '0' ) {
           $('#id-card').show();
           $('#sex').text('male');
-        } else {
+          return;
+        }  if ( sex == '1' ) {
           $('#id-card').show();
           $('#id-card').css('background', 'url("/html/assets/images/idcard2.png")');
           $('#sex').text('female');
