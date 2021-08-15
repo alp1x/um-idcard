@@ -1,7 +1,8 @@
 # qb-idcard
-###### Dependencies
-[qb-core](https://github.com/qbcore-framework/qb-core)
+## Dependencies
+* [qb-core](https://github.com/qbcore-framework/qb-core)
 
+## Features
 + simple id card
 + use item and exit with backspace
 + thanks for the design, Buzzee
