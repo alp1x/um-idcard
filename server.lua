@@ -12,6 +12,7 @@ QBCore.Functions.CreateCallback('qb-idcard:openInformation', function(source, cb
          ['gender'] = xPlayer.PlayerData.charinfo.gender,
          ['dob'] = xPlayer.PlayerData.charinfo.birthdate,
          ['nationality'] = xPlayer.PlayerData.charinfo.nationality,
+         ['fingerprint'] = xPlayer.PlayerData.metadata["fingerprint"],
         }
          cb(inf)
 end)
