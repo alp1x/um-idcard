@@ -8,7 +8,7 @@ QBCore.Functions.CreateCallback('qb-idcard:server:openInformation', function(sou
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local inf = {
-        ['name'] = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname,
+        ['name'] = ('%s %s'):format(Player.PlayerData.charinfo.firstname, Player.PlayerData.charinfo.lastname),
         ['gender'] = Player.PlayerData.charinfo.gender,
         ['dob'] = Player.PlayerData.charinfo.birthdate,
         ['nationality'] = Player.PlayerData.charinfo.nationality,
