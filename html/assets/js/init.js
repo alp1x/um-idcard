@@ -9,7 +9,7 @@ $(document).ready(function(){
       $("#dob").html(event.data.information.dob);
       $("#nationality").html(event.data.information.nationality);
       $("#fingerprint").html(event.data.information.fingerprint);
-      } 
+      }
         if ( sex == '0' ) {
           $('#id-card').show();
           $('#sex').text('male');
@@ -19,13 +19,15 @@ $(document).ready(function(){
           $('#sex').text('female');
         }
 
-        if (event.data.action == 'close') { 
+        if (event.data.action == 'close') {
           $('#id-card').hide();
         }
   });
-
-  
 });
 
 
-
+document.onkeyup = function (data) {
+  if (data.which == 27) { // Escape key
+      $.post('http://qb-idcard/escape', JSON.stringify({}));
+  }
+}

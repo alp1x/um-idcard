@@ -1,30 +1,33 @@
 -- @uyuyorum qb-idcard {basic} --
-    local open = false
-    RegisterNetEvent('qb-idcard:open')
-    AddEventHandler('qb-idcard:open', function()
-        OpenScreen()
-        open = true
-    end)
+IDCardOpen = false
 
-    function OpenScreen()
-    QBCore.Functions.TriggerCallback('qb-idcard:openInformation', function(inf)
+RegisterNetEvent('qb-idcard:client:open')
+AddEventHandler('qb-idcard:open', function()
+    OpenScreen()
+end)
+
+RegisterNetEvent('qb-idcard:client:close')
+AddEventHandler('qb-idcard:client:close', function()
+    CloseScreen()
+end)
+
+RegisterNUICallback("escape", function(data, cb)
+    CloseScreen()
+end)
+
+function OpenScreen()
+    QBCore.Functions.TriggerCallback('qb-idcard:server:openInformation', function(inf)
         SendNUIMessage({
             status = "open",
             information = inf
         })
+        IDCardOpen = true
     end)
-    end
+end
 
-    Citizen.CreateThread(function()
-        while true do
-            Wait(5)
-            if open == true then
-            if IsControlJustReleased(0, 322) or IsControlJustReleased(0, 177) then
-                SendNUIMessage({
-                    action = "close"
-                })
-                open = false
-            end
-        end
-        end
-    end)
+function CloseScreen()
+    SendNUIMessage({
+        action = "close"
+    })
+    IDCardOpen = false
+end

@@ -5,7 +5,7 @@ game 'gta5'
 ui_page 'html/index.html'
 
 
-shared_script { 
+shared_script {
 	'@qb-core/import.lua'
 }
 

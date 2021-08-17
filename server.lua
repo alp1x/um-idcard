@@ -1,18 +1,18 @@
 -- @uyuyorum qb-idcard {basic} --
 
 QBCore.Functions.CreateUseableItem("id_card", function(source,item)
-    TriggerClientEvent('qb-idcard:open', source)
+    TriggerClientEvent('qb-idcard:client:open', source)
 end)
 
-QBCore.Functions.CreateCallback('qb-idcard:openInformation', function(source, cb)
+QBCore.Functions.CreateCallback('qb-idcard:server:openInformation', function(source, cb)
     local src = source
-    local xPlayer = QBCore.Functions.GetPlayer(src)
+    local Player = QBCore.Functions.GetPlayer(src)
     local inf = {
-         ['name'] = xPlayer.PlayerData.charinfo.firstname .. ' ' .. xPlayer.PlayerData.charinfo.lastname,
-         ['gender'] = xPlayer.PlayerData.charinfo.gender,
-         ['dob'] = xPlayer.PlayerData.charinfo.birthdate,
-         ['nationality'] = xPlayer.PlayerData.charinfo.nationality,
-         ['fingerprint'] = xPlayer.PlayerData.metadata["fingerprint"],
-        }
-         cb(inf)
+        ['name'] = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname,
+        ['gender'] = Player.PlayerData.charinfo.gender,
+        ['dob'] = Player.PlayerData.charinfo.birthdate,
+        ['nationality'] = Player.PlayerData.charinfo.nationality,
+        ['fingerprint'] = Player.PlayerData.metadata["fingerprint"],
+    }
+    cb(inf)
 end)
