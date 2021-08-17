@@ -8,6 +8,7 @@ $(document).ready(function(){
       $("#sex").html(event.data.information.gender);
       $("#dob").html(event.data.information.dob);
       $("#nationality").html(event.data.information.nationality);
+      $("#fingerprint").html(event.data.information.fingerprint);
       } 
         if ( sex == '0' ) {
           $('#id-card').show();
