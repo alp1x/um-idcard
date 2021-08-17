@@ -3,31 +3,31 @@ $(document).ready(function(){
   // LUA listener
   window.addEventListener('message', function( event ) {
     if (event.data.status == 'open') {
-      var sex = event.data.information.gender
-      $("#name").html(event.data.information.name);
-      $("#sex").html(event.data.information.gender);
-      $("#dob").html(event.data.information.dob);
-      $("#nationality").html(event.data.information.nationality);
-      $("#fingerprint").html(event.data.information.fingerprint);
-      }
-        if ( sex == '0' ) {
-          $('#id-card').show();
-          $('#sex').text('male');
-        } else if ( sex == '1' ) {
-          $('#id-card').show();
-          $('#id-card').css('background', 'url("/html/assets/images/idcard2.png")');
-          $('#sex').text('female');
-        }
+      let {gender, name, dob, nationality, fingerprint} = event.data.information;
 
-        if (event.data.action == 'close') {
-          $('#id-card').hide();
-        }
+      let sex = gender == 0 ? 'male' : 'female';
+
+      $("#name").html(name);
+      $("#sex").html(sex);
+      $("#dob").html(dob);
+      $("#nationality").html(nationality);
+      $("#fingerprint").html(fingerprint);
+
+
+      $('#id-card').fadeIn();
+    }
+
+    if (event.data.action == 'close') {
+      $('#id-card').fadeOut();
+    }
   });
+
+  $('#id-card').css('background', 'url("/html/assets/images/idcard2.png")');
 });
 
 
 document.onkeyup = function (data) {
   if (data.which == 27) { // Escape key
-      $.post('http://qb-idcard/escape', JSON.stringify({}));
+    $.post('http://qb-idcard/escape', JSON.stringify({}));
   }
 }
