@@ -1,18 +1,18 @@
 -- @uyuyorum qb-idcard {basic} --
     local open = false
     RegisterNetEvent('qb-idcard:open')
-    AddEventHandler('qb-idcard:open', function()
-        OpenScreen()
+    AddEventHandler('qb-idcard:open', function(item)
+        OpenScreen(item)
         open = true
     end)
 
-    function OpenScreen()
+    function OpenScreen(item)
     QBCore.Functions.TriggerCallback('qb-idcard:openInformation', function(inf)
         SendNUIMessage({
             status = "open",
             information = inf
         })
-    end)
+    end, item)
     end
 
     Citizen.CreateThread(function()
