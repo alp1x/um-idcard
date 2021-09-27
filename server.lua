@@ -1,18 +1,21 @@
--- @uyuyorum qb-idcard {basic} --
-
 QBCore.Functions.CreateUseableItem("id_card", function(source,item)
-    TriggerClientEvent('qb-idcard:open', source, item)
+    local nui = 'idcard'
+    TriggerClientEvent('qb-idcard:client:open', source, item, nui)
 end)
 
-QBCore.Functions.CreateCallback('qb-idcard:openInformation', function(source, cb, idcard)
-    local src = source
-    local xPlayer = QBCore.Functions.GetPlayer(src)
+QBCore.Functions.CreateUseableItem("driver_license", function(source,item)
+    local nui = 'driverlicense'
+    TriggerClientEvent('qb-idcard:client:open', source, item, nui)
+end)
+
+QBCore.Functions.CreateCallback('qb-idcard:server:openInformation', function(source, cb, item)
     local inf = {
-        ['name'] = idcard["info"]["lastname"] .. ' ' .. idcard["info"]["firstname"],
-        ['gender'] = idcard["info"]["gender"],
-        ['dob'] = idcard["info"]["birthdate"],
-        ['nationality'] = idcard["info"]["nationality"],
-        ['fingerprint'] = idcard["info"]["fingerprint"],
+        ['name'] = item["info"]["lastname"] .. ' ' .. item["info"]["firstname"],
+        ['gender'] = item["info"]["gender"],
+        ['dob'] = item["info"]["birthdate"],
+        ['nationality'] = item["info"]["nationality"],
+        ['type'] = item["info"]["type"],
+        ['fingerprint'] = item["info"]["fingerprint"],
     }
     cb(inf)
 end)
