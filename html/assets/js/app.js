@@ -21,6 +21,7 @@ window.addEventListener('message', function( event ) {
       $('#card').css('background', 'url("/html/assets/images/driverlicense.png")');
       }  
     if ( sex == '0' ) {
+      $('#card').css('background', 'url("/html/assets/images/idcard.png")');
       $('#sex').text('male');
     } else if ( sex == '1' ) {
       $('#card').css('background', 'url("/html/assets/images/idcard2.png")');
