@@ -9,6 +9,7 @@ window.addEventListener('message', function( event ) {
       $("#nationality").html(event.data.information.nationality);
       $("#type").html('');
       $('#card').css('background', 'url("/ui/assets/img/idcard.png") no-repeat');
+      $('#card').css('background-size', '61.2vh');
       }
       else if (event.data.nui == 'driverlicense') {
         $('#seximg').attr('src', 'assets/img/driver.png');
@@ -19,6 +20,7 @@ window.addEventListener('message', function( event ) {
         $("#sex").html('');
         $("#nationality").html('');
         $('#card').css('background', 'url("/ui/assets/img/driverlicense.png") no-repeat');
+        $('#card').css('background-size', '61.2vh');
         }  
       else if (event.data.nui == 'weaponlicense') {
         $('#seximg').attr('src', 'assets/img/weapon.png');
@@ -26,6 +28,7 @@ window.addEventListener('message', function( event ) {
         $("#lastname").html(event.data.information.lastname);
         $("#dob").html(event.data.information.dob);
         $('#card').css('background', 'url("/ui/assets/img/weaponlicense.png") no-repeat');
+        $('#card').css('background-size', '61.2vh');
         $("#nationality").html('');
         $("#sex").html('');
         $("#type").html('');
@@ -39,6 +42,7 @@ window.addEventListener('message', function( event ) {
           $("#nationality").html('');
           $("#type").html('');
           $('#card').css('background', 'url("/ui/assets/img/lawyerpass.png") no-repeat');
+          $('#card').css('background-size', '61.2vh');
           }
             if ( sex == '0' ) {
               $('#seximg').attr('src', 'assets/img/male.png');
