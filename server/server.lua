@@ -1,23 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-QBCore.Functions.CreateUseableItem("id_card", function(source,item)
-    TriggerEvent('qb-idcard:server:showid',source, item, 'idcard')
-end)
-
-QBCore.Functions.CreateUseableItem("driver_license", function(source,item)
-    TriggerEvent('qb-idcard:server:showid',source, item, 'driverlicense')
-end)
-
-QBCore.Functions.CreateUseableItem("weaponlicense", function(source,item)
-    TriggerEvent('qb-idcard:server:showid',source, item, 'weaponlicense')
-end)
-
-QBCore.Functions.CreateUseableItem("lawyerpass", function(source,item)
-    TriggerEvent('qb-idcard:server:showid', source, item, 'lawyerpass')
-end)
-
-
-RegisterNetEvent('qb-idcard:server:showid',function(source, item, nui)
+local ShowId = function(source, item, nui)
     local found = false
     local character = QBCore.Functions.GetPlayer(source)
     local PlayerPed = GetPlayerPed(source)
@@ -43,4 +26,20 @@ RegisterNetEvent('qb-idcard:server:showid',function(source, item, nui)
     if not found then
         TriggerClientEvent('qb-idcard:client:open', source, info, nui)
     end
+end
+
+QBCore.Functions.CreateUseableItem("id_card", function(source,item)
+    ShowId(source, item, 'idcard')
+end)
+
+QBCore.Functions.CreateUseableItem("driver_license", function(source,item)
+    ShowId(source, item, 'driverlicense')
+end)
+
+QBCore.Functions.CreateUseableItem("weaponlicense", function(source,item)
+    ShowId(source, item, 'weaponlicense')
+end)
+
+QBCore.Functions.CreateUseableItem("lawyerpass", function(source,item)
+    ShowId(source, item, 'lawyerpass')
 end)
