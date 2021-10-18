@@ -6,6 +6,8 @@
 
 Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/qb-core)**
 
+**[PSD](https://mega.nz/file/Bj4SVRLJ#d9ocP5SA5SvEAv9Sn_PzoO3anBescvsRQ9OF0DmqcSE)**
+
 <p align="left">
   <img width="160" height="100" src="https://i.hizliresim.com/favgirt.png">
 <img width="160" height="100" src="https://i.hizliresim.com/eu17qfv.png">
