@@ -1,5 +1,6 @@
-RegisterNetEvent('qb-idcard:client:open')
-AddEventHandler('qb-idcard:client:open', function(item,nui)
+local QBCore = exports['qb-core']:GetCoreObject()
+
+RegisterNetEvent('qb-idcard:client:open', function(item,nui)
     QBCore.Functions.TriggerCallback('qb-idcard:server:openInformation', function(inf)
         SetNuiFocus(true,false)
             SendNUIMessage({

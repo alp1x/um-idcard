@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6vh;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#card{
+    display: none;
+    float: right;
+    width: 65vh;
+    height: 43vh;
+    margin-top: 21vh;
+    background: url(../img/idcard.png) no-repeat;
+    background-size: 66vh;
+}
+
+div.cardimg {
+    width: 16.5vh;
+    float: left;
+    margin: 12vh 0 0 6.2vh;
+}
+
+div.cardimg img {
+    width: 18vh;
+}
+
+div.cardinfo {
+    margin-top: 13.1vh;
+}
+
+div.cardinfo ul {
+    list-style-type: none;
+}
+
+div.cardinfo ul li#lastname{
+    margin-bottom: 1.9vh;
+}
+div.cardinfo ul li {
+    margin-bottom: 1.6vh;
+}
+

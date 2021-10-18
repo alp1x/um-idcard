@@ -1,3 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
 QBCore.Functions.CreateUseableItem("id_card", function(source,item)
     local nui = 'idcard'
     TriggerClientEvent('qb-idcard:client:open', source, item, nui)
@@ -8,9 +10,20 @@ QBCore.Functions.CreateUseableItem("driver_license", function(source,item)
     TriggerClientEvent('qb-idcard:client:open', source, item, nui)
 end)
 
+QBCore.Functions.CreateUseableItem("weaponlicense", function(source,item)
+    local nui = 'weaponlicense'
+    TriggerClientEvent('qb-idcard:client:open', source, item, nui)
+end)
+
+QBCore.Functions.CreateUseableItem("lawyerpass", function(source,item)
+    local nui = 'lawyerpass'
+    TriggerClientEvent('qb-idcard:client:open', source, item, nui)
+end)
+
 QBCore.Functions.CreateCallback('qb-idcard:server:openInformation', function(source, cb, item)
     local inf = {
-        ['name'] = item["info"]["lastname"] .. ' ' .. item["info"]["firstname"],
+        ['name'] = item["info"]["firstname"],
+        ['lastname'] = item["info"]["lastname"],
         ['gender'] = item["info"]["gender"],
         ['dob'] = item["info"]["birthdate"],
         ['nationality'] = item["info"]["nationality"],
