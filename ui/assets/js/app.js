@@ -57,7 +57,7 @@ window.addEventListener('message', function( event ) {
 document.onkeyup = function (event) {
 event = event || window.event;
 var charCode = event.keyCode || event.which;
-if (charCode == 27) {
+if (charCode == 8) { // Nui hide key backspace
   $.post(`https://qb-idcard/escape`)
   $('#card').hide();
 }};
