@@ -79,6 +79,8 @@ Config.NormalIDCard = true -- Make this false if you use the "qb-idcard" script 
 ``` 
 
 + server.cfg ```ensure qb-idcard or [qb] folder```
++ use item {show nui}
++ hide nui key {backspace}
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
