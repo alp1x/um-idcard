@@ -73,10 +73,7 @@ QBCore.Functions.CreateUseableItem("id_card", function(source, item)
 	end
 end)
 ```
-+ aj-inventory > config.lua > Find and Change
-```lua
-Config.NormalIDCard = true -- Make this false if you use the "qb-idcard" script -- https://github.com/alp1x/qb-idcard
-``` 
+
 
 + server.cfg ```ensure qb-idcard or [qb] folder```
 + use item {show nui}
