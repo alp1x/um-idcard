@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 author 'uyuyorum {um}'
 description 'idcard'
-version '2.0.0'
+version '2.1.0'
 
 ui_page 'ui/ui.html'
 client_script {'client/client.lua'}
