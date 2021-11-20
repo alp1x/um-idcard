@@ -1,4 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('qb-idcard:client:open', function(info,nui)
     SetNuiFocusKeepInput(true)
