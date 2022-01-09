@@ -17,7 +17,7 @@ local ShowId = function(source, item, nui)
         local TargetPed = GetPlayerPed(v)
         local dist = #(PlayerCoords - GetEntityCoords(TargetPed))
         if dist < 3.0 and PlayerPed ~= TargetPed then
-            TriggerClientEvent('QBCore:Notify', source, "You showed your id to " .. v, "info")
+            TriggerClientEvent('QBCore:Notify', source, "You showed your idcard")
             TriggerClientEvent('qb-idcard:client:open', v, info, nui)
             found = true
             break
