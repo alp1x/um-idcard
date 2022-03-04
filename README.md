@@ -78,20 +78,20 @@ end)
 
 ### inventory > server > main.lua > find QBCore.Commands.Add("giveitem" and add
 ```lua
-				elseif itemData["name"] == "weaponlicense" then
-					info.firstname = Player.PlayerData.charinfo.firstname
-					info.lastname = Player.PlayerData.charinfo.lastname
-					info.birthdate = Player.PlayerData.charinfo.birthdate
-				elseif itemData["name"] == "lawyerpass" then
-					info.firstname = Player.PlayerData.charinfo.firstname
-					info.lastname = Player.PlayerData.charinfo.lastname
-					info.birthdate = Player.PlayerData.charinfo.birthdate
-				elseif itemData["name"] == "policecard" then
-					info.firstname = Player.PlayerData.charinfo.firstname
-					info.lastname = Player.PlayerData.charinfo.lastname
-					info.birthdate = Player.PlayerData.charinfo.birthdate
-					info.gender = Player.PlayerData.charinfo.gender
-					info.nationality = Player.PlayerData.charinfo.nationality
+	elseif itemData["name"] == "weaponlicense" then
+		info.firstname = Player.PlayerData.charinfo.firstname
+		info.lastname = Player.PlayerData.charinfo.lastname
+		info.birthdate = Player.PlayerData.charinfo.birthdate
+	elseif itemData["name"] == "lawyerpass" then
+		info.firstname = Player.PlayerData.charinfo.firstname
+		info.lastname = Player.PlayerData.charinfo.lastname
+		info.birthdate = Player.PlayerData.charinfo.birthdate
+	elseif itemData["name"] == "policecard" then
+		info.firstname = Player.PlayerData.charinfo.firstname
+		info.lastname = Player.PlayerData.charinfo.lastname
+		info.birthdate = Player.PlayerData.charinfo.birthdate
+		info.gender = Player.PlayerData.charinfo.gender
+		info.nationality = Player.PlayerData.charinfo.nationality
 ```
 
 + server.cfg ```ensure qb-idcard or [qb] folder```
