@@ -6,13 +6,13 @@
 
 Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/qb-core)**
 
-**[PSD](https://mega.nz/file/Bj4SVRLJ#d9ocP5SA5SvEAv9Sn_PzoO3anBescvsRQ9OF0DmqcSE)**
 
 <p align="left">
-  <img width="160" height="100" src="https://i.hizliresim.com/favgirt.png">
-<img width="160" height="100" src="https://i.hizliresim.com/eu17qfv.png">
-<img width="160" height="100" src="https://i.hizliresim.com/9dihzzm.png">
-<img width="160" height="100" src="https://i.hizliresim.com/jbm0m4s.png">
+  <img width="160" height="90" src="https://i.ibb.co/bvckB2p/Ba-l-ks-z-2.png">
+<img width="160" height="90" src="https://i.ibb.co/K0HGGRD/Ba-l-ks-z-3.png">
+<img width="160" height="90" src="https://i.ibb.co/M5mJjH3/Ba-l-ks-z-4.png">
+<img width="160" height="90" src="https://i.ibb.co/zh1NLjR/Ba-l-ks-z-5.png">
+<img width="160" height="90" src="https://i.ibb.co/vzzw9h1/Ba-l-ks-z-6.png">
 </p>
 
 ## How to use
@@ -72,12 +72,37 @@ QBCore.Functions.CreateUseableItem("id_card", function(source, item)
 		end
 	end
 end)
-```
 
+```
+#### qb-core > shared > items.lua > add item policecard
+
+### inventory > server > main.lua > find QBCore.Commands.Add("giveitem" and add
+```lua
+				elseif itemData["name"] == "weaponlicense" then
+					info.firstname = Player.PlayerData.charinfo.firstname
+					info.lastname = Player.PlayerData.charinfo.lastname
+					info.birthdate = Player.PlayerData.charinfo.birthdate
+				elseif itemData["name"] == "lawyerpass" then
+					info.firstname = Player.PlayerData.charinfo.firstname
+					info.lastname = Player.PlayerData.charinfo.lastname
+					info.birthdate = Player.PlayerData.charinfo.birthdate
+				elseif itemData["name"] == "policecard" then
+					info.firstname = Player.PlayerData.charinfo.firstname
+					info.lastname = Player.PlayerData.charinfo.lastname
+					info.birthdate = Player.PlayerData.charinfo.birthdate
+					info.gender = Player.PlayerData.charinfo.gender
+					info.nationality = Player.PlayerData.charinfo.nationality
+```
 
 + server.cfg ```ensure qb-idcard or [qb] folder```
 + use item {show nui}
 + hide nui key {backspace}
+
+## Changelog (v3)
++ Added config.js and language setting
++ More flexible now
++ Added police card and badge prop,animation
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
