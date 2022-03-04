@@ -1,26 +1,35 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UM qb-idcard</title>
     <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <div id="card">
-      <div class="cardimg">
-         <img id="seximg" src="assets/img/male.png">
-      </div>
-      <div class="cardinfo">
-         <ul>
-            <li id="lastname"></li>
-            <li id="name"></li>
-            <li id="dob"></li>
-            <li id="sex"></li>
-            <li id="type"></li>
-            <li id="nationality"></li>
-         </ul>
-      </div>
-   </div>
-    <script src="assets/js/app.js" type="text/javascript"></script>
-  </body>
+</head>
+<body>
+<div class="qb-idcard">
+    <div class="header">
+        <span id="lang-header1"></span><img src="assets/img/icon.png"><span id="lang-header2"></span>
+    </div>
+    <div class="icon">
+        <img id="seximg" src="assets/img/male.png">
+    </div>
+    <div class="text">
+        <ul>
+            <li id="lang-last"></li>
+            <span id="name" class="info"></span>
+            <li id="lang-first"></li>
+            <span id="lastname" class="info"></span>
+            <li id="lang-dob"></li>
+            <span id="dob" class="info"></span>
+            <li id="lang-sex"></li>
+            <span id="sex" class="info"></span>
+            <li id="lang-nat"></li>
+            <span id="nationality" class="info"></span>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../config.js"></script>
+<script src="assets/js/app.js"></script>
 </html>
