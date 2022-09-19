@@ -95,7 +95,7 @@ end)
 + server.cfg ```ensure qb-idcard or [qb] folder```
 + use item {show nui}
 + hide nui key {config.js}
-+ 
+
 ## Changelog (v3.5)
 + Vue.js
 + Auto close config.js
