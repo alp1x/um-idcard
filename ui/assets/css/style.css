@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root { --font: "Poppins", sans-serif; --zero: 0; --rel: relative; --abs: absolute; }
-body { margin: var(--zero); padding: var(--zero); font-family: var(--font); text-transform: uppercase; user-select: none; }
+body { margin: var(--zero); padding: var(--zero); font-family: var(--font); text-transform: uppercase; user-select: none; overflow: hidden;}
 .qb-idcard {position: var(--abs);width: 45vh;height: 26vh;right: 3vh;top: 25vh;border: 0.4vh solid rgb(255 255 255 / 16%);border-radius: 1.3vh;}
 .qb-idcard .header { text-align: center; font-size: 2vh; font-weight: 600; width: 50vh; }
 .qb-idcard .header img {width: 3.5vh;margin-left: -1.2vh;margin-top: 1vh;}
