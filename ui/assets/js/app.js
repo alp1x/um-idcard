@@ -76,7 +76,7 @@ const idcard = Vue.createApp({
       }
         },
         postMessage: function(data) {
-			fetch(`https://${GetParentResourceName()}/${data}`, {
+	   fetch(`https://${GetParentResourceName()}/${data}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
             })
