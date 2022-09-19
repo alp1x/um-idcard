@@ -12,7 +12,8 @@ local ShowId = function(source, item, nui)
         ['gender'] = item.info.gender,
         ['dob'] = item.info.birthdate,
         ['nationality'] = item.info.nationality,
-        ['type'] = item.info.type
+        ['type'] = item.info.type,
+        ['image'] = item.info.image,
     }
     for k, v in pairs(QBCore.Functions.GetPlayers()) do
         local TargetPed = GetPlayerPed(v)

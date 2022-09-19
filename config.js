@@ -1,5 +1,12 @@
 QB = []; 
 
+QB.AutoClose = {
+   close: false, // or true
+   time: 3000,
+};
+
+QB.CloseKey = 'Backspace';
+
 QB.Idcardlang = {
    header: "Los Santos",
    langlast: "Last Name", 

@@ -1,35 +1,39 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>UM qb-idcard</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-<div class="qb-idcard">
-    <div class="header">
-        <span id="lang-header1"></span><img src="assets/img/icon.png"><span id="lang-header2"></span>
-    </div>
-    <div class="icon">
-        <img id="seximg" src="assets/img/male.png">
-    </div>
-    <div class="text">
-        <ul>
-            <li id="lang-last"></li>
-            <span id="lastname" class="info"></span>
-            <li id="lang-first"></li>
-            <span id="name" class="info"></span>
-            <li id="lang-dob"></li>
-            <span id="dob" class="info"></span>
-            <li id="lang-sex"></li>
-            <span id="sex" class="info"></span>
-            <li id="lang-nat"></li>
-            <span id="nationality" class="info"></span>
-        </ul>
-    </div>
-</div>
-</body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../config.js"></script>
-<script src="assets/js/app.js"></script>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>UM qb-idcard</title>
+      <link rel="stylesheet" href="assets/css/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.39/vue.global.prod.min.js"></script>
+   </head>
+   <body>
+      <div id="card">
+         <div :class="{slideout:disabled, slidein:!disabled }" class="qb-idcard" :style="{backgroundColor: background}" v-show="nui">
+            <div class="header">
+               <span id="lang-header1">{{langheader}}</span>
+               <img src="assets/img/icon.png">
+               <span id="lang-header2">{{langheader2}}</span>
+            </div>
+            <div class="icon">
+               <img id="seximg" src="assets/img/male.png">
+            </div>
+            <div class="text">
+               <ul>
+                  <li id="lang-last">{{langlast}}</li>
+                  <span id="lastname" class="info">{{Lastname}}</span>
+                  <li id="lang-first">{{langfirst}}</li>
+                  <span id="name" class="info">{{Name}}</span>
+                  <li id="lang-dob">{{langdob}}</li>
+                  <span id="dob" class="info">{{Dob}}</span>
+                  <li v-show="!show" id="lang-sex">{{langsex}}</li>
+                  <span v-show="!show" id="sex" class="info">{{Sex}}</span>
+                  <li v-show="!show" id="lang-nat">{{langnat}}</li>
+                  <span v-show="!show" id="nationality" class="info">{{Nationality}}</span>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="../config.js"></script>
+   <script src="assets/js/app.js"></script>
 </html>

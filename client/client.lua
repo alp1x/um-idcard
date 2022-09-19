@@ -1,11 +1,14 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local openid = false
 
 RegisterNetEvent('qb-idcard:client:open', function(info,nui)
-    if not openid then
+    if not openid then 
         SetNuiFocusKeepInput(true)
-        SetNuiFocus(true,false)
+        SetNuiFocus(true)
         SendNUIMessage({nui = nui,information = info})
         openid = true
+    else
+        QBCore.Functions.Notify("Not possible","error")
     end
 end)
 
@@ -24,12 +27,13 @@ RegisterNetEvent('qb-idcard:client:policebadgeanim', function()
 end)
 
 RegisterNUICallback("escape", function()
+    SetNuiFocusKeepInput(false)
     SetNuiFocus(false)
     openid = false
 end)
 
 function loadAnimDict(dict)
-    while (not HasAnimDictLoaded(dict)) do
+    while not HasAnimDictLoaded(dict) do
         RequestAnimDict(dict)
         Wait(5)
     end
