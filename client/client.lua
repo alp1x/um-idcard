@@ -6,7 +6,7 @@ RegisterNetEvent('qb-idcard:client:open', function(info,nui)
     if not openid then 
         SetNuiFocusKeepInput(true)
         SetNuiFocus(true)
-        SendNUIMessage({nui = nui,information = info, gender = gender})
+        SendNUIMessage({nui = nui, information = info, gender = gender})
         openid = true
     else
         QBCore.Functions.Notify("Not possible","error")
