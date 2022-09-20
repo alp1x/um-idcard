@@ -8,6 +8,7 @@ const idcard = Vue.createApp({
             langdob: QB.Idcardlang.langdob,
             langnat: QB.Idcardlang.langnat,
             background: '',
+            picture: '',
             langheader2: '',
             Name: '',
             Lastname: '',
@@ -28,14 +29,17 @@ const idcard = Vue.createApp({
         this.Nationality = data.information.nationality;
         this.langsex = QB.Idcardlang.langsex;
         this.langnat = QB.Idcardlang.langnat;
-        if (data.information.gender == 0) {
+        if (data.gender == 0) {
             this.Sex = 'Male'
+            this.picture = 'male.png'
         }
-        else if (data.information.gender == 1) {
+        else if (data.gender == 1) {
             this.Sex = 'Female'
+            this.picture = 'female.png'
         }
         else {
             this.Sex = 'None'
+            this.picture = 'icon.png'
         }
             this.disabled = false;
             this.nui = true;
