@@ -1,11 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local openid = false
+local gender = QBCore.Functions.GetPlayerData().charinfo.gender
 
 RegisterNetEvent('qb-idcard:client:open', function(info,nui)
     if not openid then 
         SetNuiFocusKeepInput(true)
         SetNuiFocus(true)
-        SendNUIMessage({nui = nui,information = info})
+        SendNUIMessage({nui = nui,information = info, gender = gender})
         openid = true
     else
         QBCore.Functions.Notify("Not possible","error")
