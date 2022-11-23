@@ -1,7 +1,8 @@
 # qb-idcard
-[![Github Alp1x](https://img.shields.io/badge/Github-alp1x-pink?style=for-the-badge&logo=github)](https://github.com/alp1x/)
-[![Donate Tebex](https://img.shields.io/badge/Coffee-Donate-%23FFDD00?style=for-the-badge&logo=buymeacoffee)](https://uyuyorum.tebex.io/package/4721743)
-[![License MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative)](https://choosealicense.com/licenses/mit/)
+[![umstore](https://cdn.discordapp.com/attachments/715130970294059088/1044857362617470986/Baslksz-3.png)](https://uyuyorumstore.com)
+[![Donate](https://cdn.discordapp.com/attachments/715130970294059088/1044848075996405820/coffee.png)](https://www.buymeacoffee.com/uyuyorumcoffee)
+[![License MIT](https://cdn.discordapp.com/attachments/715130970294059088/1044845854508449822/license.png)](https://choosealicense.com/licenses/mit/)
+[![Discord](https://cdn.discordapp.com/attachments/715130970294059088/1044855172494532628/discord.png)](https://discord.gg/cf6wkBFeYV)
 
 
 Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/qb-core)**
