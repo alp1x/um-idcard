@@ -34,7 +34,7 @@ Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/q
 	<li>Updated some Text UI</li>
 	<li>Added some extra ID cards</li>
 	<li>Added Citizen ID bellow Photo</li>
-	<li>Opne/Close animation changed(FadeIn/FadeOut added)</li>
+	<li>Open/Close animation changed(FadeIn/FadeOut added)</li>
 </ul>
 
 ## How to use
