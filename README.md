@@ -16,7 +16,7 @@ Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/q
 <img width="160" height="90" src="https://i.ibb.co/zh1NLjR/Ba-l-ks-z-5.png">
 <img width="160" height="90" src="https://i.ibb.co/vzzw9h1/Ba-l-ks-z-6.png">
 </p>
-<p>With Photo</p>
+<p>With Photo <b>If you are using ```Lua sb-profilepic```</b></p>
 <p align="left">
 
   <img width="160" height="90" src="https://media.discordapp.net/attachments/977925336882876437/1062545854076039209/image.png">
