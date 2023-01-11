@@ -100,7 +100,7 @@ end)
 ```lua
 				if itemData["name"] == "id_card" then
 
-					-- if you are using sb-profilepic https://surya.tebex.io/package/5461488
+					-- if you are using sb-profilepic
 					local pic = exports['sb-profilepic']:getPhoto(Player.PlayerData.citizenid)
 					Wait(200)
 					if not pic then return TriggerClientEvent('QBCore:Notify', source,  "Player Profile Photo not updated", "error") end
