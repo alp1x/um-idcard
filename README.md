@@ -83,22 +83,69 @@ end)
 ```
 #### qb-core > shared > items.lua > add item policecard
 
-### inventory > server > main.lua > find QBCore.Commands.Add("giveitem" and add
+### inventory > server > main.lua > find QBCore.Commands.Add("giveitem" and update
 ```lua
-	elseif itemData["name"] == "weaponlicense" then
-		info.firstname = Player.PlayerData.charinfo.firstname
-		info.lastname = Player.PlayerData.charinfo.lastname
-		info.birthdate = Player.PlayerData.charinfo.birthdate
-	elseif itemData["name"] == "lawyerpass" then
-		info.firstname = Player.PlayerData.charinfo.firstname
-		info.lastname = Player.PlayerData.charinfo.lastname
-		info.birthdate = Player.PlayerData.charinfo.birthdate
-	elseif itemData["name"] == "policecard" then
-		info.firstname = Player.PlayerData.charinfo.firstname
-		info.lastname = Player.PlayerData.charinfo.lastname
-		info.birthdate = Player.PlayerData.charinfo.birthdate
-		info.gender = Player.PlayerData.charinfo.gender
-		info.nationality = Player.PlayerData.charinfo.nationality
+				if itemData["name"] == "id_card" then
+
+					-- if you are using sb-profilepic
+					local pic = exports['sb-profilepic']:getPhoto(Player.PlayerData.citizenid)
+					Wait(200)
+					if not pic then return TriggerClientEvent('QBCore:Notify', source,  "Player Profile Photo not updated", "error") end
+					info.image = pic
+					-- if you are using sb-profilepic
+
+					info.citizenid = Player.PlayerData.citizenid
+					info.firstname = Player.PlayerData.charinfo.firstname
+					info.lastname = Player.PlayerData.charinfo.lastname
+					info.birthdate = Player.PlayerData.charinfo.birthdate
+					info.gender = Player.PlayerData.charinfo.gender
+					info.nationality = Player.PlayerData.charinfo.nationality
+					 
+				elseif itemData["name"] == "driver_license" then
+
+					local pic = exports['sb-profilepic']:getPhoto(Player.PlayerData.citizenid)
+					Wait(200)
+					if not pic then return TriggerClientEvent('QBCore:Notify', source,  "Player Profile Photo not updated", "error") end
+					info.image = pic
+
+					info.firstname = Player.PlayerData.charinfo.firstname
+					info.lastname = Player.PlayerData.charinfo.lastname
+					info.citizenid = Player.PlayerData.citizenid
+					info.birthdate = Player.PlayerData.charinfo.birthdate
+					info.type = "LS" .. math.random(0, 99999) .. "SP"
+					info.date =  math.random(1, 31) .. " / " .. math.random(8, 12) .. " / " .. "2023"
+
+```
+
+### inventory > server > main.lua > find QBCore.Commands.Add("giveitem" and add
+```lua					
+				elseif itemData["name"] == "policecard" or itemData["name"] == "emscard" or itemData["name"] == "lawyerpass" or itemData["name"] == "governmentcard" or itemData["name"] == "judgecard" or itemData["name"] == "newsidcard" then
+
+				-- if you are using sb-profilepic
+				local pic = exports['sb-profilepic']:getPhoto(Player.PlayerData.citizenid)
+				Wait(200)
+				if not pic then return TriggerClientEvent('QBCore:Notify', source,  "Player Profile Photo not updated", "error") end
+				info.image = pic
+				-- if you are using sb-profilepic
+
+				info.firstname = Player.PlayerData.charinfo.firstname
+				info.lastname = Player.PlayerData.charinfo.lastname
+				info.birthdate = Player.PlayerData.charinfo.birthdate
+				info.gender = Player.PlayerData.charinfo.gender
+				info.nationality = Player.PlayerData.charinfo.nationality
+				info.citizenid = Player.PlayerData.citizenid
+				item.id = math.random(111111111,999999999)
+```
+
+### also add bellow code in weapon license and driving school script if you are using it
+
+```Lua
+					-- if you are using sb-profilepic
+					local pic = exports['sb-profilepic']:getPhoto(Player.PlayerData.citizenid)
+					Wait(200)
+					if not pic then return TriggerClientEvent('QBCore:Notify', source,  "Player Profile Photo not updated", "error") end
+					info.image = pic
+					-- if you are using sb-profilepic
 ```
 
 + server.cfg ```ensure qb-idcard or [qb] folder```
