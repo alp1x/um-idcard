@@ -35,6 +35,7 @@ Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/q
 	<li>Added some extra ID cards</li>
 	<li>Added Citizen ID bellow Photo</li>
 	<li>Open/Close animation changed(FadeIn/FadeOut added)</li>
+	<li>Fixed Gender bug</li>
 </ul>
 
 ## How to use
