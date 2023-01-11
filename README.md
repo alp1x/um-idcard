@@ -27,15 +27,15 @@ Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/q
 ## My changes in scripts
 
 <ul>
-	<li>Fixed Inventory mouse movement issue<li>
-	<li>Fixed auto close timeout issue<li>
-	<li>Fixed pause menu open issue<li>
-	<li>Fixed mobile open issue<li>
-	<li>Added character photos on all ID card<li>
-	<li>Updated some Text UI<li>
-	<li>Added some extra ID cards<li>
-	<li>Added Citizen ID bellow Photo<li>
-	<li>Opne/Close animation changed(FadeIn/FadeOut added)<li>
+	<li>Fixed Inventory mouse movement issue</li>
+	<li>Fixed auto close timeout issue</li>
+	<li>Fixed pause menu open issue</li>
+	<li>Fixed mobile open issue</li>
+	<li>Added character photos on all ID card</li>
+	<li>Updated some Text UI</li>
+	<li>Added some extra ID cards</li>
+	<li>Added Citizen ID bellow Photo</li>
+	<li>Opne/Close animation changed(FadeIn/FadeOut added)</li>
 </ul>
 
 ## How to use
