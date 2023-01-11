@@ -9,11 +9,19 @@ Simple id card you can use for **[qb-core](https://github.com/qbcore-framework/q
 
 
 <p align="left">
+<p>Without Photo(Default)</p>
   <img width="160" height="90" src="https://i.ibb.co/bvckB2p/Ba-l-ks-z-2.png">
 <img width="160" height="90" src="https://i.ibb.co/K0HGGRD/Ba-l-ks-z-3.png">
 <img width="160" height="90" src="https://i.ibb.co/M5mJjH3/Ba-l-ks-z-4.png">
 <img width="160" height="90" src="https://i.ibb.co/zh1NLjR/Ba-l-ks-z-5.png">
 <img width="160" height="90" src="https://i.ibb.co/vzzw9h1/Ba-l-ks-z-6.png">
+</p>
+
+<p align="left">
+<p>With Photo</p>
+  <img width="160" height="90" src="https://media.discordapp.net/attachments/977925336882876437/1062545854076039209/image.png">
+<img width="160" height="90" src="https://media.discordapp.net/attachments/977925336882876437/1062546206351429723/image.png">
+
 </p>
 
 ## How to use
