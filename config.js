@@ -1,11 +1,11 @@
 QB = []; 
 
 QB.AutoClose = {
-   close: false, // or true
-   time: 3000,
+   close: true, // or true
+   time: 15000,
 };
 
-QB.CloseKey = 'Backspace';
+QB.CloseKey = 'Escape';
 
 QB.Idcardlang = {
    header: "Los Santos",
@@ -13,7 +13,8 @@ QB.Idcardlang = {
    langfirst: "First Name", 
    langdob: "Dob", 
    langsex: "Sex",
-   langnat: "Nationality" 
+   langnat: "Nationality",
+   
 };
 
 QB.Idcard = {
@@ -23,7 +24,7 @@ QB.Idcard = {
 
 QB.Driverlicense = {
    header: "Driver License",
-   background: "#febbbb"
+   background: "#8cf9ff"
 };
 
 QB.Weaponlicense = {
@@ -39,4 +40,24 @@ QB.Lawyerpass = {
 QB.Policeidcard = {
    header: "Police Department",
    background: "#73b2ff"
+};
+
+QB.Emsidcard = {
+   header: "EMS Department",
+   background: "#fa78ff"
+};
+
+QB.Govidcard = {
+   header: "State Government",
+   background: "#fcfeff"
+};
+
+QB.Dojidcard = {
+   header: "Dept. of Justice",
+   background: "#65fcd2"
+};
+
+QB.Weazelcard = {
+   header: "Weazel News",
+   background: "#d9a9a9"
 };

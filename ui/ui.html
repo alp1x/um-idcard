@@ -13,22 +13,26 @@
                <span id="lang-header1">{{langheader}}</span>
                <img src="assets/img/icon.png">
                <span id="lang-header2">{{langheader2}}</span>
+               
             </div>
+            
             <div class="icon">
-             <img id="seximg" :src="'assets/img/'+picture">
+             <img id="seximg" :src="picture"><br><br>
+             <div style="text-align: center;"><b id="lang-citizenid">{{Citizenid}}</b></div>
             </div>
             <div class="text">
                <ul>
-                  <li id="lang-last">{{langlast}}</li>
-                  <span id="lastname" class="info">{{Lastname}}</span>
-                  <li id="lang-first">{{langfirst}}</li>
-                  <span id="name" class="info">{{Name}}</span>
-                  <li id="lang-dob">{{langdob}}</li>
-                  <span id="dob" class="info">{{Dob}}</span>
-                  <li v-show="!show" id="lang-sex">{{langsex}}</li>
-                  <span v-show="!show" id="sex" class="info">{{Sex}}</span>
-                  <li v-show="!show" id="lang-nat">{{langnat}}</li>
-                  <span v-show="!show" id="nationality" class="info">{{Nationality}}</span>
+                  <span id="name" class="info">{{langfirst}}</span>
+                  <li id="lang-first">{{Name}}</li>
+                  <span id="lastname" class="info">{{langlast}}</span>
+                  <li id="lang-last">{{Lastname}}</li>
+                  <span id="dob" class="info">{{langdob}}</span>
+                  <li id="lang-dob">{{Dob}}</li>
+                  <span v-show="!show" id="sex" class="info">{{langsex}}</span>
+                  <li v-show="!show" id="lang-sex">{{Sex}}</li>
+                  <span v-show="!show" id="nationality" class="info">{{langnat}}</span>
+                  <li v-show="!show" id="lang-nat">{{Nationality}}</li>
+                  
                </ul>
             </div>
          </div>

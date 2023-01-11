@@ -6,18 +6,18 @@ body { margin: var(--zero); padding: var(--zero); font-family: var(--font); text
 .qb-idcard .header img {width: 3.5vh;margin-left: -1.2vh;margin-top: 1vh;}
 .qb-idcard .header span:first-of-type {position: var(--rel);top: -1vh;left: -3vh;}
 .qb-idcard .header span {position: var(--rel);top: -1vh;left: 2vh;}
-.qb-idcard .icon { position: absolute; width: 15vh; height: 15vh; left: 3vh; }
-.qb-idcard .icon #seximg {width: 13vh;border: 0.1vh solid rgb(0 0 0 / 19%);border-radius: 1vh;margin-top: 2vh;}
+.qb-idcard .icon { position: absolute; width: 15vh; height: 15vh; max-width: 15vh; max-height: 15vh; min-width: 15vh; min-height: 15vh; left: 3vh; }
+.qb-idcard .icon #seximg {width: 13vh; height: 13vh; max-width: 13vh; max-height: 13vh; min-width: 13vh; min-height: 13vh; border: 0.1vh solid rgb(0 0 0 / 19%);border-radius: 1vh;margin-top: 2vh;margin-top: auto; margin-bottom: auto; object-fit: cover;}
 .qb-idcard .text { position: absolute; width: 25vh; height: 25vh; left: 14vh; top: 4vh; }
 .qb-idcard .text ul li { margin: 0.3vh; list-style-type: none; font-size: 1vh; text-align: right; font-weight: 900; border-bottom: 0.1vh solid rgba(0, 0, 0, 0.07); }
 .qb-idcard .text ul span.info { font-size: 1vh; font-weight: 800; padding: 2vh; }
 .slidein { animation: 0.2s ease 0s 1 normal forwards running slidein; }
-.slideout { animation: 0.3s ease 0s 1 normal forwards running slideout; }
+.slideout { animation: 0.2s ease 0s 1 normal forwards running slideout; }
 @keyframes slidein { 
-  0% { right: 7vh; }
-  100% { right: 1vh; }
+  0% { opacity: 0.0;}
+  100% { opacity: 1.0;}
 }
 @keyframes slideout { 
-  0% { right: 1vh; }
-  100% { right: 7vh; }
+  0% { opacity: 1.0;}
+  100% { opacity: 0.0;}
 }
