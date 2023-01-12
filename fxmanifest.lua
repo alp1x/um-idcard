@@ -15,3 +15,5 @@ files {
 	'ui/assets/js/*.js',
 	'ui/assets/img/*.png',
 }
+
+lua54 'yes'
