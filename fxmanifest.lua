@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'uyuyorum {um}'
-description 'idcard'
-version '3.5.0'
+description 'qb-idcard'
+version '3.6.0'
 
 ui_page 'ui/ui.html'
 client_script 'client/client.lua'

@@ -1,6 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-local ShowId = function(source, item, nui)
+local function ShowId(source, item, nui)
     local src = source
     local found = false
     local character = QBCore.Functions.GetPlayer(src)
@@ -20,13 +20,17 @@ local ShowId = function(source, item, nui)
         local dist = #(PlayerCoords - GetEntityCoords(TargetPed))
         if dist < 3.0 and PlayerPed ~= TargetPed then
             TriggerClientEvent('QBCore:Notify', src, "You showed your idcard")
-            TriggerClientEvent('qb-idcard:client:open', v, info, nui)
+            TriggerClientEvent('qb-idcard:client:openNui', v, info, nui)
             found = true
             break
         end
     end
-    if not found then TriggerClientEvent('qb-idcard:client:open', src, info, nui) end
-    if nui == 'policecard' then TriggerClientEvent('qb-idcard:client:policebadgeanim', src) end
+    if nui == 'policecard' then
+        TriggerClientEvent('qb-idcard:client:policebadgeanim', src)
+    end
+    if not found then
+        TriggerClientEvent('qb-idcard:client:openNui', src, info, nui)
+    end
 end
 
 QBCore.Functions.CreateUseableItem("id_card", function(source,item)

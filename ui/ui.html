@@ -10,7 +10,7 @@
       <div id="card">
          <div :class="{slideout:disabled, slidein:!disabled }" class="qb-idcard" :style="{backgroundColor: background}" v-show="nui">
             <div class="header">
-               <span id="lang-header1">{{langheader}}</span>
+               <span id="lang-header1">{{lang.header}}</span>
                <img src="assets/img/icon.png">
                <span id="lang-header2">{{langheader2}}</span>
             </div>
@@ -19,15 +19,15 @@
             </div>
             <div class="text">
                <ul>
-                  <li id="lang-last">{{langlast}}</li>
+                  <li id="lang-last">{{lang.langlast}}</li>
                   <span id="lastname" class="info">{{Lastname}}</span>
-                  <li id="lang-first">{{langfirst}}</li>
+                  <li id="lang-first">{{lang.langfirst}}</li>
                   <span id="name" class="info">{{Name}}</span>
-                  <li id="lang-dob">{{langdob}}</li>
+                  <li id="lang-dob">{{lang.langdob}}</li>
                   <span id="dob" class="info">{{Dob}}</span>
-                  <li v-show="!show" id="lang-sex">{{langsex}}</li>
+                  <li v-show="!show" id="lang-sex">{{lang.langsex}}</li>
                   <span v-show="!show" id="sex" class="info">{{Sex}}</span>
-                  <li v-show="!show" id="lang-nat">{{langnat}}</li>
+                  <li v-show="!show" id="lang-nat">{{lang.langnat}}</li>
                   <span v-show="!show" id="nationality" class="info">{{Nationality}}</span>
                </ul>
             </div>
