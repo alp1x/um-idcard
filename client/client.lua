@@ -10,10 +10,9 @@ end
 
 RegisterNetEvent('qb-idcard:client:openNui', function(info,nui)
     if not openid then
-        local gender = QBCore.Functions.GetPlayerData().charinfo.gender
             SetNuiFocusKeepInput(true)
             SetNuiFocus(true)
-            SendNUIMessage({nui = nui, information = info, gender = gender})
+            SendNUIMessage({nui = nui, information = info})
             openid = true
     else
         QBCore.Functions.Notify("Not possible","error")
