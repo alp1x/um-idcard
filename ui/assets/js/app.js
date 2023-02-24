@@ -50,10 +50,10 @@ const idcard = Vue.createApp({
           this.Nationality = data.information.nationality;
           this.lang.langsex = 'Sex';
           this.lang.langnat = 'Nationality';
-          if (data.gender == 0) {
+          if (data.information.gender == 0) {
              this.Sex = 'Male'
              this.picture = 'male.png'
-          } else if (data.gender == 1) {
+          } else if (data.information.gender == 1) {
              this.Sex = 'Female'
              this.picture = 'female.png'
           } else {
