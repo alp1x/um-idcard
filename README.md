@@ -97,17 +97,16 @@ end)
 + use item {show nui}
 + hide nui key {config.js}
 
+## Changelog (v3.6)
++ now works with ox_inventory
++ more stable
+
 ## Changelog (v3.5)
 + Vue.js
 + Auto close config.js
 + Close key config.js
 + CSS cleaned
 + More flexible now
-
-## Changelog (v3)
-+ Added config.js and language setting
-+ More flexible now
-+ Added police card and badge prop,animation
 
 
 ## License
