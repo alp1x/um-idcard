@@ -6,10 +6,10 @@
 
 
 <p align="center">
-<img width="240" height="150" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949227327529/identity.png">
-<img width="240" height="150" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324948942106674/driverlicense.png">
-<img width="240" height="150" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949466394684/lawyerpass.png">
-<img width="240" height="150" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949692878869/weapon_license.png">
+<img width="210" height="130" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949227327529/identity.png">
+<img width="210" height="130" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324948942106674/driverlicense.png">
+<img width="210" height="130" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949466394684/lawyerpass.png">
+<img width="210" height="130" src="https://cdn.discordapp.com/attachments/1016069609897595011/1093324949692878869/weapon_license.png">
 </p>
  <p><b>qb-idcard</b> has been updated and renamed as <b>um-idcard</b>, and it is now compatible with <b>ESX</b> and </b><b>QBCore</b> and <b>Qbox</b></p>
 
