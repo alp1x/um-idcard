@@ -14,21 +14,9 @@ end
 RegisterNetEvent('um-idcard:client:sendData', function(playerData)
     if not openID and not dataReady then
         nuiFocus(true)
-        ---@todo Run this only once configData
-        SendNUIMessage({type = 'configData', configData = Config})
         SendNUIMessage({type = 'playerData', playerData = playerData})
     end
 end)
-
---[[AddEventHandler('onResourceStart', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
-    dataReady = true
-    SetTimeout(1000, function()
-        SendNUIMessage({type = 'configData', configData = Config})
-        print('Config ready')
-        dataReady = false
-    end)
-end)]]
 
 RegisterNetEvent('um-idcard:client:notifyOx', function(data)
     lib.notify({title = data.title, description = data.desc, icon = data.icon, iconColor = data.iconColor})
@@ -49,4 +37,15 @@ end)
 RegisterNUICallback('closeIdCard', function(_,cb)
     cb(1)
     nuiFocus(false)
+end)
+
+--- Thread
+---@todo Run this only once configData
+CreateThread(function()
+    dataReady = true
+    SetTimeout(5000, function()
+        SendNUIMessage({type = 'configData', configData = Config})
+        print('Config ready')
+        dataReady = false
+    end)
 end)
