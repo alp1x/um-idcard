@@ -25,7 +25,6 @@
 ### Usage
 * Just use the item
 * If there is someone near you, it will be visible to them, otherwise only you will see it.
-* When you use the item, it takes your mugshot only once, saves it to SQL and keeps it in a cache
 * It takes a mugshot of you on the first use of the item and saves it in SQL, and then it continuously retrieves it from the cache instead of SQL.
 
 
