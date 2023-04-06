@@ -1,19 +1,32 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
+
+name 'um-idcard'
 author 'uyuyorum {um}'
-description 'qb-idcard'
-version '3.6.0'
+version '1.0.0'
+license 'GPL-3.0 license'
+repository 'https://github.com/alp1x/um-idcard'
+description 'FiveM Identity Card for QBCore and ESX and QBox'
 
-ui_page 'ui/ui.html'
-client_script 'client/client.lua'
-server_script 'server/server.lua'
-
-files {
-	'config.js',
-	'ui/ui.html',
-	'ui/assets/css/*.css',
-	'ui/assets/js/*.js',
-	'ui/assets/img/*.png',
+shared_scripts {
+	'@ox_lib/init.lua',
+	'config.lua'
 }
 
-lua54 'yes'
+client_script 'client/main.lua'
+
+server_scripts {
+	'@oxmysql/lib/MySQL.lua',
+	'server/*.lua'
+}
+
+ui_page "web/index.html"
+
+files {
+	'web/index.html',
+	'web/css/style.css',
+	'web/flags/*.png',
+	'lang/global.js',
+	'web/js/*.js',
+}

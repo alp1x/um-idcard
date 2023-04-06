@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@100&display=swap');
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: "Poppins", sans-serif;;
+     text-transform: uppercase;
+     user-select: none;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     height: 100vh;
+     padding-right: 3vh;
+}
+ #um-idcard {
+     visibility: hidden;
+     width: 43vh;
+     height: 26vh;
+     border-radius: 1.3vh;
+     background: #ebebeb;
+     display: flex;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     flex-direction: column;
+     align-items: center;
+}
+ #um-idcard .header {
+     display: flex;
+     align-items: center;
+     font-size: 2vh;
+     font-weight: 500;
+     letter-spacing: 2px;
+     padding: 0.5vh;
+     border-bottom: 1px solid #0000001f;
+}
+ #um-idcard .header img {
+     width: 3.5vh;
+     margin-left: -1.2vh;
+     margin-top: 1vh;
+}
+ #um-idcard .header span {
+     margin: 0 0.5vh;
+}
+ #um-idcard .content {
+     display: flex;
+     width: 100%;
+}
+ #um-idcard .icon {
+     flex: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ #um-idcard .icon #mugshot {
+     width: 10vh;
+     border: 0.1vh solid rgb(0 0 0 / 19%);
+     border-radius: 0.8vh;
+     height: 10vh;
+}
+ #um-idcard .text {
+     flex: 1.6;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     padding: 1.5vh;
+}
+ #um-idcard .text ul {
+     width: 100%;
+}
+ #um-idcard .text ul li {
+     display: flex;
+     justify-content: space-between;
+     list-style-type: none;
+     font-size: 1.2vh;
+     font-weight: 900;
+     border-bottom: 0.1vh solid rgba(0, 0, 0, 0.07);
+     padding: 0.3vh 0;
+}
+ #um-idcard .text ul span.info {
+     font-size: 1vh;
+     font-weight: 800;
+     padding-left: 2vh;
+}
+ .footer {
+     display: flex;
+     width: 100%;
+}
+ .signature {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: self-start;
+     margin-left: 4vh;
+     font-family: 'Alex Brush', cursive;
+     text-transform: capitalize;
+     font-weight: bold;
+     font-size: 1.5vh;
+}
+ .signature, .flagsandimg img{
+     width: 16px;
+     height: 16px;
+     opacity: 0.8;
+}
+ .flagsandimg #smallmugshot {
+     filter: grayscale(1);
+     border-radius: 40px;
+}
+ .flagsandimg {
+     flex: 1;
+     display: flex;
+     flex-direction: row-reverse;
+     margin-right: 2vh;
+     justify-content: revert;
+}
