@@ -38,6 +38,7 @@
 ### Todo
 * Card animations
 * Police badge and other badges
+* Some fixes
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
