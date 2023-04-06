@@ -37,6 +37,7 @@
 ### Todo
 * Card animations
 * Police badge and other badges
+* Get licenses driver weapon etc
 * Some fixes
 
 ## License
