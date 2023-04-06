@@ -23,7 +23,7 @@ RegisterNetEvent('um-idcard:client:notifyOx', function(data)
 end)
 
 -- Client Callback Register
-lib.callback.register('um-idcard:client:callBack:getClosestPlayer', function(radius)
+lib.callback.register('um-idcard:client:callBack:getClosestPlayer', function()
     local ClosestPlayer = lib.getClosestPlayer(GetEntityCoords(cache.ped), 2.0, false)
     return GetPlayerServerId(ClosestPlayer)
 end)
