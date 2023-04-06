@@ -38,7 +38,7 @@
 * Card animations
 * Police badge and other badges
 * Get licenses driver,weapon etc
-* [Some fixes](https://github.com/alp1x/um-idcard/blob/main/client/main.lua#L17)
+* [Some fixes](https://github.com/alp1x/um-idcard/blob/main/client/main.lua#L44)
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
