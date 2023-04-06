@@ -18,6 +18,9 @@
 * If you don't have them, download the requirements
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
 * After ox_lib and MugShotBase64 ```ensure um-idcard or [um] folder```
+#### qb-inventory or lj-inventory delete this
+* https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
+* https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
 
 ### Usage
 * Just use the item
@@ -25,17 +28,16 @@
 * When you use the item, it takes your mugshot only once, saves it to SQL and keeps it in a cache
 * It takes a mugshot of you on the first use of the item and saves it in SQL, and then it continuously retrieves it from the cache instead of SQL.
 
+
 ### Custom Card Maker
 * **https://alp1x.github.io/um-idcard-maker/**
 ### Requirements
 * **[ox_lib](https://github.com/overextended/ox_lib/releases)**
 * **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)**
 
-#### qb-inventory or lj-inventory delete this
-* https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
-* https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
-
-
+### Todo
+* Card animations
+* Police badge and other badges
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
