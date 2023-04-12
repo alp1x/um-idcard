@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'um-idcard'
 author 'uyuyorum {um}'
-version '1.2.0'
+version '1.2.1'
 license 'GPL-3.0 license'
 repository 'https://github.com/alp1x/um-idcard'
 description 'FiveM Identity Card for QBCore and ESX and QBox'
