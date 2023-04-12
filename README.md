@@ -62,12 +62,7 @@ exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
 ```
 
 #### qb-cityhall replace this
-* https://github.com/qbcore-framework/qb-cityhall/blob/main/server/main.lua#L23
-```lua 
-local function giveStarterItems()
-  exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license'})
-end 
-```
+
 ## ESX Starter Setup
 
 ## License
