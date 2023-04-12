@@ -10,16 +10,16 @@ Config.IdCardSettings = {
 
 Config.Licenses = {
    ["id_card"] = {
-      header= "Identity",
-      background= "#ebf7fd"
+      header = "Identity",
+      background = "#ebf7fd",
    },
    ["driver_license"] = {
-      header= "Driver License",
-      background= "#febbbb"
+      header = "Driver License",
+      background = "#febbbb"
    },
    ["weaponlicense"] = {
-      header= "Weapon License",
-      background= "#c7ffe5"
+      header = "Weapon License",
+      background = "#c7ffe5"
    },
    ["lawyerpass"] = {
       header= "Lawyer Pass",

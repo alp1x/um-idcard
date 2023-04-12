@@ -43,7 +43,7 @@ end)
 ---@todo Run this only once configData
 CreateThread(function()
     dataReady = true
-    SetTimeout(5000, function()
+    SetTimeout(3000, function()
         SendNUIMessage({type = 'configData', configData = Config})
         print('Config ready')
         dataReady = false
