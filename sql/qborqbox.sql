@@ -1,1 +1,0 @@
-ALTER TABLE `players` ADD COLUMN `mugshot` mediumtext DEFAULT NULL AFTER `last_updated`;
