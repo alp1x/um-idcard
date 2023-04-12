@@ -41,7 +41,7 @@ exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license','weap
 * **[ox_lib](https://github.com/overextended/ox_lib/releases)**
 * **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)**
 
-### QBCore Setup
+### QBCore Starter Setup
 #### qb-inventory or lj-inventory delete this
 * https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
 * https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
@@ -61,7 +61,7 @@ exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license','weap
 exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
 ```
 
-### ESX Setup
+### ESX Starter Setup
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
