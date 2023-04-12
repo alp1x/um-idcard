@@ -20,7 +20,8 @@ server_scripts {
 	'@oxmysql/lib/MySQL.lua',
 	'bridge/framework/*.lua',
 	'bridge/inventory/*.lua',
-	'main/server.lua'
+	'main/server.lua',
+	'main/version.lua',
 }
 
 ui_page "web/index.html"
