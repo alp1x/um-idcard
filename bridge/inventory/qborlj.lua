@@ -1,4 +1,4 @@
-if GetResourceState('qb-inventory') ~= 'started' or GetResourceState('lj-inventory') ~= 'started' then return end
+if GetResourceState('qb-inventory') ~= 'started' --[[or GetResourceState('lj-inventory') ~= 'started']] then return end
 
 QBCore = exports['qb-core']:GetCoreObject()
 
