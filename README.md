@@ -26,7 +26,7 @@
 * If there is someone near you, it will be visible to them, otherwise only you will see it.
 * It takes a mugshot of you on the first use of the item and saves it in metadata.
 
-### Custom Card Maker
+### How to create a custom identity card?
 * **https://alp1x.github.io/um-idcard-maker/**
 
 ### How can I add an identity card with metadata? (for server)
