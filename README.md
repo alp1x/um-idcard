@@ -18,7 +18,7 @@
 * If you don't have them, download the requirements
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
 * After ox_lib and MugShotBase64 ```ensure um-idcard or [um] folder```
-* [QBCore Starter Setup](https://github.com/alp1x/um-idcard/edit/main/README.md#qbcore-setup)
+* [QBCore Starter Setup](https://github.com/alp1x/um-idcard#qbcore-starter-setup)
 * ESX Starter Setup
 
 ### Usage
