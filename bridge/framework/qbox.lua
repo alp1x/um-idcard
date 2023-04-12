@@ -1,6 +1,6 @@
-if GetResourceState('qb-core') ~= 'started' then return end
+if GetResourceState('qbx-core') ~= 'started' then return end
 
-QBCore = exports['qb-core']:GetCoreObject()
+QBCore = exports['qbx-core']:GetCoreObject()
 
 local metadata = {}
 
