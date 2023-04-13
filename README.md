@@ -55,14 +55,15 @@ ___
 ######  https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
 
-#### qb-inventory or lj-inventory replacethis
+#### qb-inventory or lj-inventory replace this
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2366
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2373
 ```lua 
-if itemData["name"] == "id_card" or itemData["name"] == "driver_license" or itemData["name"] == "weaponlicense" or itemData["name"] == "lawyerpass" then
+local cardlist = {"id_card", "driver_license", "weaponlicense", "lawyerpass"}
+if string.find(table.concat(cardlist, ","), itemData["type"]) then
     exports['um-idcard']:CreateMetaLicense(source, itemData["name"])
     QBCore.Functions.Notify(source, Lang:t("notify.yhg") ..GetPlayerName(id).." "..amount.." "..itemData["name"].. "", "success")
-    return 
+    return
 ```
 
 #### qb-multicharacter replace this
