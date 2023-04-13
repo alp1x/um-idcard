@@ -62,6 +62,34 @@ exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
 ```
 
 #### qb-cityhall replace this
+* https://github.com/qbcore-framework/qb-cityhall/blob/main/server/main.lua#L23
+```lua 
+local function giveStarterItems()
+    local Player = QBCore.Functions.GetPlayer(source)
+    if not Player then return end
+    exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license'})
+end
+```
+* https://github.com/qbcore-framework/qb-cityhall/blob/main/server/main.lua#L53
+```lua
+RegisterNetEvent('qb-cityhall:server:requestId', function(item, hall)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if not Player then return end
+    local itemInfo = Config.Cityhalls[hall].licenses[item]
+    if not Player.Functions.RemoveMoney("cash", itemInfo.cost) then return TriggerClientEvent('QBCore:Notify', src, ('You don\'t have enough money on you, you need %s cash'):format(itemInfo.cost), 'error') end
+    if item == "id_card" then
+        exports['um-idcard']:CreateMetaLicense(src, 'id_card')
+    elseif item == "driver_license" then
+        exports['um-idcard']:CreateMetaLicense(src, 'driver_license')
+    elseif item == "weaponlicense" then
+        exports['um-idcard']:CreateMetaLicense(src, 'weapon_license')
+    else
+        return false -- DropPlayer(src, 'Attempted exploit abuse')
+    end
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
+end)
+```
 
 ## ESX Starter Setup
 
