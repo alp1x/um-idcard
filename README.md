@@ -60,7 +60,7 @@ ___
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2373
 ```lua 
 local cardlist = {"id_card", "driver_license", "weaponlicense", "lawyerpass"}
-if string.find(table.concat(cardlist, ","), itemData["type"]) then
+if string.find(table.concat(cardlist, ","), itemData["name"]) then
     exports['um-idcard']:CreateMetaLicense(source, itemData["name"])
     QBCore.Functions.Notify(source, Lang:t("notify.yhg") ..GetPlayerName(id).." "..amount.." "..itemData["name"].. "", "success")
     return
