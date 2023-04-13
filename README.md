@@ -85,7 +85,7 @@ RegisterNetEvent('qb-cityhall:server:requestId', function(item, hall)
     elseif item == "driver_license" then
         exports['um-idcard']:CreateMetaLicense(src, 'driver_license')
     elseif item == "weaponlicense" then
-        exports['um-idcard']:CreateMetaLicense(src, 'weapon_license')
+        exports['um-idcard']:CreateMetaLicense(src, 'weaponlicense')
     else
         return false -- DropPlayer(src, 'Attempted exploit abuse')
     end
