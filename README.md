@@ -147,5 +147,10 @@ AddEventHandler('esx_dmvschool:addLicense', function(type)
 end)
 ```
 
+## Contributors 
+<a href="https://github.com/alp1x/um-idcard/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=alp1x/um-idcard" />
+</a>
+
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
