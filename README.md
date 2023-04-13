@@ -55,12 +55,14 @@ ___
 ######  https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
 
-#### qb-inventory or lj-inventory remove the info. and just add these
+#### qb-inventory or lj-inventory replacethis
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2366
 ###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2373
 ```lua 
-#2366 exports['um-idcard']:CreateMetaLicense(source, 'id_card')
-#2373 exports['um-idcard']:CreateMetaLicense(source, 'driver_license')
+if itemData["name"] == "id_card" or itemData["name"] == "driver_license" or itemData["name"] == "weaponlicense" or itemData["name"] == "lawyerpass" then
+    exports['um-idcard']:CreateMetaLicense(source, itemData["name"])
+    QBCore.Functions.Notify(source, Lang:t("notify.yhg") ..GetPlayerName(id).." "..amount.." "..itemData["name"].. "", "success")
+    return 
 ```
 
 #### qb-multicharacter replace this
