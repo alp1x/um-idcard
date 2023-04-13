@@ -152,7 +152,7 @@ end)
 
 ### example of use in es_extended server -> main.lua -> line 323 add this
 
-## ¡Don't remove nathing, you have add, not remove!
+## ¡Don't remove nothing, you have add, not remove!
 
 Before
 ```lua
