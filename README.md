@@ -39,6 +39,7 @@ exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license','weap
 
 ### Requirements
 * **[ox_lib](https://github.com/overextended/ox_lib/releases)**
+* **[ox_inventory](https://github.com/overextended/ox_inventory/releases)**
 * **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)**
 
 ___
@@ -94,6 +95,53 @@ end)
 ```
 
 # ESX Starter Setup
+
+Add the item to ox_inventory -> data -> items.lua
+```lua
+['your_license_name'] = {
+          label = 'Your Label License',
+          weight = 0,
+          stack = false,
+          close = true,
+          description = "Your Description",
+          client = {image = 'customlicense.png'}
+	},
+```
+
+example of use in esx_dmvschool server -> main.lua -> line 19 replace for this
+
+Old
+```lua
+RegisterNetEvent('esx_dmvschool:addLicense')
+AddEventHandler('esx_dmvschool:addLicense', function(type)
+	local source = source
+	local xPlayer = ESX.GetPlayerFromId(source)
+	
+	TriggerEvent('esx_license:addLicense', source, type, function()
+		TriggerEvent('esx_license:getLicenses', source, function(licenses)
+			TriggerClientEvent('esx_dmvschool:loadLicenses', source, licenses)
+		end)
+	end)
+end)
+```
+New
+
+```lua
+RegisterNetEvent('esx_dmvschool:addLicense')
+AddEventHandler('esx_dmvschool:addLicense', function(type)
+	local source = source
+	local xPlayer = ESX.GetPlayerFromId(source)
+ 
+	TriggerEvent('esx_license:addLicense', source, type, function()
+		TriggerEvent('esx_license:getLicenses', source, function(licenses)
+   			--Create the license with the player's data and give the license to the player
+   			--note that the license must be created in ox_inventory, otherwise it will fail.
+   			exports['um-idcard']:CreateMetaLicense(source, 'driver_license')
+			TriggerClientEvent('esx_dmvschool:loadLicenses', source, licenses)
+		end)
+	end)
+end)
+```
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
