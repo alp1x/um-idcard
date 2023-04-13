@@ -103,7 +103,7 @@ end)
 # ESX Starter Setup
 <sup>thanks to [KevinAlonsoQC](https://github.com/KevinAlonsoQC)</sup>
 
-Add the item to ox_inventory -> data -> items.lua
+### Add the item to ox_inventory -> data -> items.lua
 ```lua
 ['your_license_name'] = {
           label = 'Your Label License',
@@ -115,7 +115,7 @@ Add the item to ox_inventory -> data -> items.lua
 	},
 ```
 
-example of use in esx_dmvschool server -> main.lua -> line 19 replace for this
+### example of use in esx_dmvschool server -> main.lua -> line 19 replace for this
 
 Old
 ```lua
@@ -148,6 +148,52 @@ AddEventHandler('esx_dmvschool:addLicense', function(type)
 		end)
 	end)
 end)
+```
+
+### example of use in es_extended server -> main.lua -> line 323 add this
+
+## ¡Don't remove nathing, you have add, not remove!
+
+Before
+```lua
+xPlayer.triggerEvent('esx:playerLoaded',
+    {
+      accounts = xPlayer.getAccounts(), 
+      coords = xPlayer.getCoords(), 
+      identifier = xPlayer.getIdentifier(), 
+      inventory = xPlayer.getInventory(),
+      job = xPlayer.getJob(), 
+      loadout = xPlayer.getLoadout(), 
+      maxWeight = xPlayer.getMaxWeight(), 
+      money = xPlayer.getMoney(),
+      sex = xPlayer.get("sex") or "m",
+      uid = xPlayer.get("uid"),
+      dead = false
+    }, isNew,
+    userData.skin)
+```
+
+After
+```lua
+xPlayer.triggerEvent('esx:playerLoaded',
+    {
+      accounts = xPlayer.getAccounts(), 
+      coords = xPlayer.getCoords(), 
+      identifier = xPlayer.getIdentifier(), 
+      inventory = xPlayer.getInventory(),
+      job = xPlayer.getJob(), 
+      loadout = xPlayer.getLoadout(), 
+      maxWeight = xPlayer.getMaxWeight(), 
+      money = xPlayer.getMoney(),
+      sex = xPlayer.get("sex") or "m",
+      uid = xPlayer.get("uid"),
+      dead = false
+    }, isNew,
+    userData.skin)
+
+  if isNew then
+    exports['um-idcard']:CreateMetaLicense(xPlayer.source, 'id_card')
+  end
 ```
 
 ## Contributors 
