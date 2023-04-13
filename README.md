@@ -39,8 +39,11 @@ exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license','weap
 
 ### Requirements
 * **[ox_lib](https://github.com/overextended/ox_lib/releases)**
-* **[ox_inventory](https://github.com/overextended/ox_inventory/releases)**
 * **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)**
+
+### Inventory
+* **[ox_inventory](https://github.com/overextended/ox_inventory/releases)** (ESX or QBCore)
+* **[qb-inventory or lj-inventory ](https://github.com/qbcore-framework/qb-inventory)** (QBCore)
 
 ___
 
@@ -95,6 +98,7 @@ end)
 ```
 
 # ESX Starter Setup
+<sup>thanks to [KevinAlonsoQC](https://github.com/KevinAlonsoQC)</sup>
 
 Add the item to ox_inventory -> data -> items.lua
 ```lua
