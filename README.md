@@ -15,7 +15,6 @@
 
 
 ### Setup
-* If you don't have them, download the requirements
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
 * After **[ox_lib](https://github.com/overextended/ox_lib/releases)** and **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)** 
 * ```ensure um-idcard or [um] folder```
