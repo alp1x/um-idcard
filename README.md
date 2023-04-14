@@ -17,187 +17,24 @@
 ### Setup
 * If you don't have them, download the requirements
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
-* After ox_lib and MugShotBase64 ```ensure um-idcard or [um] folder```
-* [QBCore Starter Setup](https://github.com/alp1x/um-idcard#qbcore-starter-setup)
-* [ESX Starter Setup](https://github.com/alp1x/um-idcard#esx-starter-setup)
+* After **[ox_lib](https://github.com/overextended/ox_lib/releases)** and **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)** 
+* ```ensure um-idcard or [um] folder```
+* 📄 **[QBCore Starter Setup](https://github.com/alp1x/um-idcard/wiki/QBCore-Starter-Setup)**
+* 📄 **[ESX Starter Setup](https://github.com/alp1x/um-idcard/wiki/ESX-Starter-Setup)**
 
 ### Usage
 * Just use the item
 * If there is someone near you, it will be visible to them, otherwise only you will see it.
 * It takes a mugshot of you on the first use of the item and saves it in metadata.
 
-### How to create a custom identity card?
-* **https://alp1x.github.io/um-idcard-maker/**
-
-### How can I add an identity card with metadata? (for server)
-```lua 
-exports['um-idcard']:CreateMetaLicense(source, string or table)
-```
-```lua 
-exports['um-idcard']:CreateMetaLicense(source, 'id_card')
-```
-```lua 
-exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license','weaponlicense','lawyerpass'})
-```
-
-### Requirements
-* **[ox_lib](https://github.com/overextended/ox_lib/releases)**
-* **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)**
+### Custom Card Maker
+* **[um-idcard-maker](https://alp1x.github.io/um-idcard-maker/)**
 
 ### Inventory
 * **[ox_inventory](https://github.com/overextended/ox_inventory/releases)** (ESX or QBCore)
 * **[qb-inventory or lj-inventory ](https://github.com/qbcore-framework/qb-inventory)** (QBCore)
 
-___
 
-# QBCore Starter Setup
-#### qb-inventory or lj-inventory delete this
-######  https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2439
-###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2462
-
-#### qb-inventory or lj-inventory replace this
-###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2366
-###### https://github.com/qbcore-framework/qb-inventory/blob/main/server/main.lua#L2373
-```lua 
-local cardlist = {"id_card", "driver_license", "weaponlicense", "lawyerpass"}
-if string.find(table.concat(cardlist, ","), itemData["name"]) then
-    exports['um-idcard']:CreateMetaLicense(source, itemData["name"])
-    QBCore.Functions.Notify(source, Lang:t("notify.yhg") ..GetPlayerName(id).." "..amount.." "..itemData["name"].. "", "success")
-    return
-```
-
-#### qb-multicharacter replace this
-###### https://github.com/qbcore-framework/qb-multicharacter/blob/main/server/main.lua#L120
-###### https://github.com/qbcore-framework/qb-multicharacter/blob/main/server/main.lua#L126
-```lua 
-exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
-```
-
-#### qb-cityhall replace this
-###### https://github.com/qbcore-framework/qb-cityhall/blob/main/server/main.lua#L23
-```lua 
-local function giveStarterItems()
-    local Player = QBCore.Functions.GetPlayer(source)
-    if not Player then return end
-    exports['um-idcard']:CreateMetaLicense(source, {'id_card','driver_license'})
-end
-```
-###### https://github.com/qbcore-framework/qb-cityhall/blob/main/server/main.lua#L53
-```lua
-RegisterNetEvent('qb-cityhall:server:requestId', function(item, hall)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    if not Player then return end
-    local itemInfo = Config.Cityhalls[hall].licenses[item]
-    if not Player.Functions.RemoveMoney("cash", itemInfo.cost) then return TriggerClientEvent('QBCore:Notify', src, ('You don\'t have enough money on you, you need %s cash'):format(itemInfo.cost), 'error') end
-    if item == "id_card" then
-        exports['um-idcard']:CreateMetaLicense(src, 'id_card')
-    elseif item == "driver_license" then
-        exports['um-idcard']:CreateMetaLicense(src, 'driver_license')
-    elseif item == "weaponlicense" then
-        exports['um-idcard']:CreateMetaLicense(src, 'weaponlicense')
-    else
-        return false -- DropPlayer(src, 'Attempted exploit abuse')
-    end
-    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
-end)
-```
-
-# ESX Starter Setup
-<sup>thanks to [KevinAlonsoQC](https://github.com/KevinAlonsoQC)</sup>
-
-### Add the item to ox_inventory -> data -> items.lua
-```lua
-['your_license_name'] = {
-          label = 'Your Label License',
-          weight = 0,
-          stack = false,
-          close = true,
-          description = "Your Description",
-          client = {image = 'customlicense.png'}
-	},
-```
-
-### example of use in esx_dmvschool server -> main.lua -> line 19 replace for this
-
-Old
-```lua
-RegisterNetEvent('esx_dmvschool:addLicense')
-AddEventHandler('esx_dmvschool:addLicense', function(type)
-	local source = source
-	local xPlayer = ESX.GetPlayerFromId(source)
-	
-	TriggerEvent('esx_license:addLicense', source, type, function()
-		TriggerEvent('esx_license:getLicenses', source, function(licenses)
-			TriggerClientEvent('esx_dmvschool:loadLicenses', source, licenses)
-		end)
-	end)
-end)
-```
-New
-
-```lua
-RegisterNetEvent('esx_dmvschool:addLicense')
-AddEventHandler('esx_dmvschool:addLicense', function(type)
-	local source = source
-	local xPlayer = ESX.GetPlayerFromId(source)
- 
-	TriggerEvent('esx_license:addLicense', source, type, function()
-		TriggerEvent('esx_license:getLicenses', source, function(licenses)
-   			--Create the license with the player's data and give the license to the player
-   			--note that the license must be created in ox_inventory, otherwise it will fail.
-   			exports['um-idcard']:CreateMetaLicense(source, 'driver_license')
-			TriggerClientEvent('esx_dmvschool:loadLicenses', source, licenses)
-		end)
-	end)
-end)
-```
-
-### example of use in es_extended server -> main.lua -> line 323 add this
-
-## ¡Don't remove nothing, you have add, not remove!
-
-Before
-```lua
-xPlayer.triggerEvent('esx:playerLoaded',
-    {
-      accounts = xPlayer.getAccounts(), 
-      coords = xPlayer.getCoords(), 
-      identifier = xPlayer.getIdentifier(), 
-      inventory = xPlayer.getInventory(),
-      job = xPlayer.getJob(), 
-      loadout = xPlayer.getLoadout(), 
-      maxWeight = xPlayer.getMaxWeight(), 
-      money = xPlayer.getMoney(),
-      sex = xPlayer.get("sex") or "m",
-      uid = xPlayer.get("uid"),
-      dead = false
-    }, isNew,
-    userData.skin)
-```
-
-After
-```lua
-xPlayer.triggerEvent('esx:playerLoaded',
-    {
-      accounts = xPlayer.getAccounts(), 
-      coords = xPlayer.getCoords(), 
-      identifier = xPlayer.getIdentifier(), 
-      inventory = xPlayer.getInventory(),
-      job = xPlayer.getJob(), 
-      loadout = xPlayer.getLoadout(), 
-      maxWeight = xPlayer.getMaxWeight(), 
-      money = xPlayer.getMoney(),
-      sex = xPlayer.get("sex") or "m",
-      uid = xPlayer.get("uid"),
-      dead = false
-    }, isNew,
-    userData.skin)
-
-  if isNew then
-    exports['um-idcard']:CreateMetaLicense(xPlayer.source, 'id_card')
-  end
-```
 
 ## Contributors 
 <a href="https://github.com/alp1x/um-idcard/graphs/contributors">
