@@ -17,7 +17,7 @@
 ### Setup
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
 * After **[ox_lib](https://github.com/overextended/ox_lib/releases)** and **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)** 
-* ```ensure um-idcard or [um] folder```
+* `ensure um-idcard` or `ensure [um] folder`
 * 📄 **[QBCore Starter Setup](https://github.com/alp1x/um-idcard/wiki/QBCore-Starter-Setup)**
 * 📄 **[ESX Starter Setup](https://github.com/alp1x/um-idcard/wiki/ESX-Starter-Setup)**
 
