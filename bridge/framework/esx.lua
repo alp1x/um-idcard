@@ -19,10 +19,10 @@ local function CreateMetaLicense(src, itemTable)
             metadata = {
                 cardtype = v,
                 identifier = xPlayer.getIdentifier(),
-                firstName = xPlayer.variables.firstName,
-                lastName = xPlayer.variables.lastName,
-                dob = xPlayer.variables.dateofbirth,
-                sex =  xPlayer.variables.sex,
+                firstname = xPlayer.variables.firstName,
+                lastname = xPlayer.variables.lastName,
+                birthdate = xPlayer.variables.dateofbirth,
+                sex = xPlayer.variables.sex,
                 nationality = 'Los Santos',
                 mugShot = 'none',
             }

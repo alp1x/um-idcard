@@ -31,9 +31,9 @@ local function CreateMetaLicense(src, itemTable)
             metadata = {
                 cardtype = v,
                 citizenid = Player.PlayerData.citizenid,
-                firstName = Player.PlayerData.charinfo.firstname,
-                lastName = Player.PlayerData.charinfo.lastname,
-                dob = Player.PlayerData.charinfo.birthdate,
+                firstname = Player.PlayerData.charinfo.firstname,
+                lastname = Player.PlayerData.charinfo.lastname,
+                birthdate = Player.PlayerData.charinfo.birthdate,
                 sex =  GetStringSex(Player.PlayerData.charinfo.gender),
                 nationality = Player.PlayerData.charinfo.nationality,
                 mugShot = 'none',

@@ -25,14 +25,14 @@ window.addEventListener('message', (event) => {
   const { type, playerData, configData } = event.data;
   switch (type) {
     case 'playerData':
-      const { mugShot, lastName, firstName, dob, sex, nationality, cardtype } = playerData;
+      const { mugShot, lastname, firstname, birthdate, sex, nationality, cardtype } = playerData;
       const license = config.Licenses[cardtype];
       getElementById('mugshot').src = mugShot;
       getElementById('smallmugshot').src = mugShot;
-      getElementById('lastname').textContent = lastName;
-      getElementById('name').textContent = firstName;
-      getElementById('sign').textContent = lastName + ' ' + firstName;
-      getElementById('dob').textContent = dob;
+      getElementById('lastname').textContent = lastname;
+      getElementById('name').textContent = firstname;
+      getElementById('sign').textContent = lastname + ' ' + firstname;
+      getElementById('dob').textContent = birthdate;
       getElementById('sex').textContent = sex;
       getElementById('nationality').textContent = nationality;
       getElementById('cardtype').textContent = license.header;
