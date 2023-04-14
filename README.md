@@ -29,7 +29,7 @@
 ### How to create a custom identity card?
 * **[um-idcard-maker](https://alp1x.github.io/um-idcard-maker/)**
 
-### How can I add an identity card with metadata?
+### How can add an identity card with metadata?
 * **[Exports](https://github.com/alp1x/um-idcard/wiki/How-can-I-add-an-identity-card-with-metadata%3F)**
 
 ### Inventory
