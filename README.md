@@ -26,8 +26,11 @@
 * If there is someone near you, it will be visible to them, otherwise only you will see it.
 * It takes a mugshot of you on the first use of the item and saves it in metadata.
 
-### Custom Card Maker
+### How to create a custom identity card?
 * **[um-idcard-maker](https://alp1x.github.io/um-idcard-maker/)**
+
+### How can I add an identity card with metadata?
+* **[Exports](https://github.com/alp1x/um-idcard/wiki/How-can-I-add-an-identity-card-with-metadata%3F)**
 
 ### Inventory
 * **[ox_inventory](https://github.com/overextended/ox_inventory/releases)** (ESX or QBCore)
