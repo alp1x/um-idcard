@@ -32,6 +32,9 @@
 ### How can add an identity card with metadata?
 * **[Exports](https://github.com/alp1x/um-idcard/wiki/How-can-I-add-an-identity-card-with-metadata%3F)**
 
+### Optional
+* **[um-idcard-menu](https://github.com/alp1x/um-idcard-menu)**
+
 ### Inventory
 * **[ox_inventory](https://github.com/overextended/ox_inventory/releases)** (ESX or QBCore)
 * **[qb-inventory or lj-inventory ](https://github.com/qbcore-framework/qb-inventory)** (QBCore)
