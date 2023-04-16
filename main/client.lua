@@ -10,6 +10,11 @@ local function nuiFocus(bool)
     openID = bool
 end
 
+-- Send config data to the nui
+local function sendConfigData()
+    SendNUIMessage({type = 'configData', configData = Config})
+end
+
 -- Events
 RegisterNetEvent('um-idcard:client:sendData', function(playerData)
     if not openID and not dataReady then
@@ -39,13 +44,17 @@ RegisterNUICallback('closeIdCard', function(_,cb)
     nuiFocus(false)
 end)
 
---- Thread
----@todo Run this only once configData
-CreateThread(function()
-    dataReady = true
-    SetTimeout(3000, function()
-        SendNUIMessage({type = 'configData', configData = Config})
-        print('Config ready')
-        dataReady = false
-    end)
+-- Loaded
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function() sendConfigData() end)
+
+RegisterNetEvent('esx:playerLoaded', function() sendConfigData() end)
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() ~= resourceName then return end 
+        dataReady = true
+        SetTimeout(2000, function()
+            sendConfigData()
+            print('Config ready')
+            dataReady = false
+        end)
 end)
