@@ -34,8 +34,7 @@ lib.callback.register('um-idcard:client:callBack:getClosestPlayer', function()
 end)
 
 lib.callback.register('um-idcard:client:callBack:getMugShot', function()
-    local MugShot = exports['MugShotBase64']:GetMugShotBase64(cache.ped, false)
-    return MugShot
+    return exports['MugShotBase64']:GetMugShotBase64(cache.ped, false)
 end)
 
 --- Nui Callback
