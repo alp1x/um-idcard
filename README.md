@@ -18,8 +18,8 @@
 * Make sure you have the items in **Config.Licenses**, otherwise add them.
 * After **[ox_lib](https://github.com/overextended/ox_lib/releases)** and **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)** 
 * `ensure um-idcard` or `ensure [um] folder`
-* 📄 **[QBCore Starter Setup](https://github.com/alp1x/um-idcard/wiki/QBCore-Starter-Setup)**
-* 📄 **[ESX Starter Setup](https://github.com/alp1x/um-idcard/wiki/ESX-Starter-Setup)**
+* 📄 **[QBCore Starter Setup](https://alp1x.github.io/um-idcard/Starter%20Setup/qbcore)**
+* 📄 **[ESX Starter Setup](https://alp1x.github.io/um-idcard/Starter%20Setup/esx)**
 
 ### Usage
 * Just use the item
@@ -30,7 +30,7 @@
 * **[um-idcard-maker](https://alp1x.github.io/um-idcard-maker/)**
 
 ### How can add an identity card with metadata?
-* **[Exports](https://github.com/alp1x/um-idcard/wiki/How-can-I-add-an-identity-card-with-metadata%3F)**
+* **[Exports](https://alp1x.github.io/um-idcard/exports)**
 
 ### Optional
 * **[um-idcard-menu](https://github.com/alp1x/um-idcard-menu)**
