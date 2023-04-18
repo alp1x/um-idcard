@@ -37,9 +37,8 @@ end)
 RegisterNetEvent('um-idcard:client:startAnim', function(cardType)
     local prop = Config.Licenses[cardType].prop
     if not prop then return print('No prop') end
-    local propName = prop
     local playerCoords = GetEntityCoords(cache.ped)
-    local createProp = CreateObject(GetHashKey(propName), playerCoords.x, playerCoords.y, playerCoords.z + 0.2, true, true, true)
+    local createProp = CreateObject(GetHashKey(prop), playerCoords.x, playerCoords.y, playerCoords.z + 0.2, true, true, true)
     loadAnimDict(animDict)
     AttachEntityToEntity(createProp, cache.ped, GetPedBoneIndex(cache.ped, 57005), 0.1000, 0.0200, -0.0300, -90.000, 170.000, 78.999, true, true, false, true, 1, true)
     TaskPlayAnim(cache.ped, animDict, anim, 3.0, -1, -1, 50, -1, false, false, false)
