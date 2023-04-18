@@ -1,4 +1,6 @@
 local openID,dataReady = false,false
+local animDict = 'paper_1_rcm_alt1-9'
+local anim = 'player_one_dual-9'
 
 -- Functions
 
@@ -8,6 +10,15 @@ local function nuiFocus(bool)
     SetNuiFocusKeepInput(bool)
     SetNuiFocus(bool,false)
     openID = bool
+end
+
+--- Load animation dictionary
+---@param dict string Animation dictionary
+local function loadAnimDict(dict)
+    while not HasAnimDictLoaded(dict) do
+        RequestAnimDict(dict)
+        Wait(5)
+    end
 end
 
 -- Send config data to the nui
@@ -23,14 +34,29 @@ RegisterNetEvent('um-idcard:client:sendData', function(playerData)
     end
 end)
 
+RegisterNetEvent('um-idcard:client:startAnim', function(cardType)
+    local prop = Config.Licenses[cardType].prop
+    if not prop then return print('No prop') end
+    local propName = prop
+    local playerCoords = GetEntityCoords(cache.ped)
+    local createProp = CreateObject(GetHashKey(propName), playerCoords.x, playerCoords.y, playerCoords.z + 0.2, true, true, true)
+    loadAnimDict(animDict)
+    AttachEntityToEntity(createProp, cache.ped, GetPedBoneIndex(cache.ped, 57005), 0.1000, 0.0200, -0.0300, -90.000, 170.000, 78.999, true, true, false, true, 1, true)
+    TaskPlayAnim(cache.ped, animDict, anim, 3.0, -1, -1, 50, -1, false, false, false)
+    SetModelAsNoLongerNeeded(createProp)
+    SetTimeout(3000, function()
+        DeleteEntity(createProp)
+        ClearPedTasks(cache.ped)
+    end)
+end)
+
 RegisterNetEvent('um-idcard:client:notifyOx', function(data)
     lib.notify({title = data.title, description = data.desc, icon = data.icon, iconColor = data.iconColor})
 end)
 
 -- Client Callback Register
 lib.callback.register('um-idcard:client:callBack:getClosestPlayer', function()
-    local ClosestPlayer = lib.getClosestPlayer(GetEntityCoords(cache.ped), 2.0, false)
-    return GetPlayerServerId(ClosestPlayer)
+    return GetPlayerServerId(lib.getClosestPlayer(GetEntityCoords(cache.ped), 2.0, false))
 end)
 
 lib.callback.register('um-idcard:client:callBack:getMugShot', function()
@@ -50,10 +76,10 @@ RegisterNetEvent('esx:playerLoaded', function() sendConfigData() end)
 
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() ~= resourceName then return end 
-        dataReady = true
-        SetTimeout(2000, function()
-            sendConfigData()
-            print('Config ready')
-            dataReady = false
-        end)
+    dataReady = true
+    SetTimeout(2000, function()
+        sendConfigData()
+        print('Config ready')
+        dataReady = false
+     end)
 end)
