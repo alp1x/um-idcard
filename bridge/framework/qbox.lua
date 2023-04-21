@@ -16,6 +16,20 @@ local function GetStringSex(sexString)
     return sexString
 end
 
+--- Get badge for license
+---@param src number Source number
+---@param itemName string
+---@return string | table
+local function GetBadge(src,itemName)
+    if not Config.Licenses[itemName].badge then return 'none' end
+    local Player = QBCore.Functions.GetPlayer(src)
+    local badgeTable = {
+        img = Config.Licenses[itemName].badge,
+        grade = Player.PlayerData.job.grade.name
+    }
+    return badgeTable
+end
+
 --- Create metadata for license
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
@@ -37,6 +51,7 @@ local function CreateMetaLicense(src, itemTable)
                 sex =  GetStringSex(Player.PlayerData.charinfo.gender),
                 nationality = Player.PlayerData.charinfo.nationality,
                 mugShot = 'none',
+                badge = GetBadge(src,v)
             }
             Player.Functions.AddItem(v, 1, false, metadata)
         end

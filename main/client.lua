@@ -1,6 +1,5 @@
 local openID,dataReady = false,false
-local animDict = 'paper_1_rcm_alt1-9'
-local anim = 'player_one_dual-9'
+local animDict,anim = 'paper_1_rcm_alt1-9','player_one_dual-9'
 
 -- Functions
 
@@ -43,7 +42,7 @@ RegisterNetEvent('um-idcard:client:startAnim', function(cardType)
     AttachEntityToEntity(createProp, cache.ped, GetPedBoneIndex(cache.ped, 57005), 0.1000, 0.0200, -0.0300, -90.000, 170.000, 78.999, true, true, false, true, 1, true)
     TaskPlayAnim(cache.ped, animDict, anim, 3.0, -1, -1, 50, -1, false, false, false)
     SetModelAsNoLongerNeeded(createProp)
-    SetTimeout(3000, function()
+    SetTimeout(3500, function()
         DeleteEntity(createProp)
         ClearPedTasks(cache.ped)
     end)

@@ -13,10 +13,26 @@
      height: 100vh;
      padding-right: 3vh;
 }
+ #badge {
+    display: none;
+    flex-direction: inherit;
+    align-items: center;
+}
+ #badge img {
+    width: 100%;
+    height: 145px;
+}
+ #badge #badgegrade {
+    background-image: linear-gradient(to right, #bbbbbb, #f3f3f3);
+    font-weight: bold;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 7px;
+}
  #um-idcard {
      visibility: hidden;
      width: 43vh;
-     height: 26vh;
+     height: auto;
      border-radius: 1.3vh;
      background: #ebebeb;
      display: flex;
@@ -27,7 +43,7 @@
  #um-idcard .header {
      display: flex;
      align-items: center;
-     font-size: 2vh;
+     font-size: 1.8vh;
      font-weight: 500;
      letter-spacing: 2px;
      padding: 0.5vh;
@@ -84,6 +100,7 @@
  .footer {
      display: flex;
      width: 100%;
+     padding: 5px;
 }
  .signature {
      flex: 1;

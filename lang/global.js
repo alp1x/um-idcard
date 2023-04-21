@@ -1,4 +1,4 @@
-export const globalLang = {
+export const Global = {
     lang_header: 'Los Santos',
     lang_lastname: 'Last Name',
     lang_firstname: 'First Name',

@@ -4,6 +4,20 @@ ESX = exports['es_extended']:getSharedObject()
 
 local metadata = {}
 
+--- Get badge for license
+---@param src number Source number
+---@param itemName string
+---@return string | table
+local function GetBadge(src,itemName)
+    if not Config.Licenses[itemName].badge then return 'none' end
+    local xPlayer = ESX.GetPlayerFromId(src)
+    local badgeTable = {
+        img = Config.Licenses[itemName].badge,
+        grade = xPlayer.getJob().grade_label
+    }
+    return badgeTable
+end
+
 --- Create metadata for license
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
@@ -25,6 +39,7 @@ local function CreateMetaLicense(src, itemTable)
                 sex = xPlayer.variables.sex,
                 nationality = 'Los Santos',
                 mugShot = 'none',
+                badge = GetBadge(src,v)
             }
             exports.ox_inventory:AddItem(src, v, 1, metadata)
         end
