@@ -34,18 +34,21 @@ RegisterNetEvent('um-idcard:client:sendData', function(playerData)
 end)
 
 RegisterNetEvent('um-idcard:client:startAnim', function(cardType)
+    if not cardType or cardType == nil then return print('No Card Type') end
+    if not Config.Licenses[cardType].prop or Config.Licenses[cardType].prop == nil then return print('Card Type: '..cardType..' No Prop') end
     local prop = Config.Licenses[cardType].prop
-    if not prop then return print('No prop') end
-    local playerCoords = GetEntityCoords(cache.ped)
-    local createProp = CreateObject(GetHashKey(prop), playerCoords.x, playerCoords.y, playerCoords.z + 0.2, true, true, true)
-    loadAnimDict(animDict)
-    AttachEntityToEntity(createProp, cache.ped, GetPedBoneIndex(cache.ped, 57005), 0.1000, 0.0200, -0.0300, -90.000, 170.000, 78.999, true, true, false, true, 1, true)
-    TaskPlayAnim(cache.ped, animDict, anim, 3.0, -1, -1, 50, -1, false, false, false)
-    SetModelAsNoLongerNeeded(createProp)
-    SetTimeout(3500, function()
-        DeleteEntity(createProp)
-        ClearPedTasks(cache.ped)
-    end)
+    if prop then
+        local playerCoords = GetEntityCoords(cache.ped)
+        local createProp = CreateObject(GetHashKey(prop), playerCoords.x, playerCoords.y, playerCoords.z + 0.2, true, true, true)
+        loadAnimDict(animDict)
+        AttachEntityToEntity(createProp, cache.ped, GetPedBoneIndex(cache.ped, 57005), 0.1000, 0.0200, -0.0300, -90.000, 170.000, 78.999, true, true, false, true, 1, true)
+        TaskPlayAnim(cache.ped, animDict, anim, 3.0, -1, -1, 50, -1, false, false, false)
+        SetModelAsNoLongerNeeded(createProp)
+        SetTimeout(3500, function()
+            DeleteEntity(createProp)
+            ClearPedTasks(cache.ped)
+        end)
+    end
 end)
 
 RegisterNetEvent('um-idcard:client:notifyOx', function(data)
