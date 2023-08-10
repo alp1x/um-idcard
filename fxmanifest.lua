@@ -9,6 +9,11 @@ license 'GPL-3.0 license'
 repository 'https://github.com/alp1x/um-idcard'
 description 'FiveM Identity Card for QBCore and ESX and QBox'
 
+dependencies {
+	'ox_lib',
+	'MugShotBase64'
+}
+
 shared_scripts {
 	'@ox_lib/init.lua',
 	'config.lua'
