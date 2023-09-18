@@ -62,6 +62,38 @@ end
 
 exports('CreateMetaLicense', CreateMetaLicense)
 
+--- Get metadata for license
+---@param src number Source number
+---@param itemTable string | table Item name or table of item names
+local function GetMetaLicense(src, itemTable)
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    if type(itemTable) == "string" then
+        itemTable = {itemTable}
+    end
+
+    if type(itemTable) == "table" then
+        for _, v in pairs(itemTable) do
+            metadata = {
+                cardtype = v,
+                citizenid = Player.PlayerData.citizenid,
+                firstname = Player.PlayerData.charinfo.firstname,
+                lastname = Player.PlayerData.charinfo.lastname,
+                birthdate = Player.PlayerData.charinfo.birthdate,
+                sex =  GetStringSex(Player.PlayerData.charinfo.gender),
+                nationality = Player.PlayerData.charinfo.nationality,
+                mugShot = 'none',
+                badge = GetBadge(src,v)
+            }
+            return metadata
+        end
+    else
+        print("Invalid parameter type")
+    end
+end
+
+exports('GetMetaLicense', GetMetaLicense)
+
 
 --- Create metadata for license
 ---@param k string item name
