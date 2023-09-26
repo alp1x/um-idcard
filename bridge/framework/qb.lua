@@ -1,11 +1,11 @@
-if GetResourceState('qb-core') ~= 'started' then return end
+if GetResourceState('qb-core') ~= 'started' or GetResourceState('qbx_core') == 'started' then return end
 
 QBCore = exports['qb-core']:GetCoreObject()
 
 local metadata = {}
 
 --- Convert sex number to string M or F
----@param sexString number | string 
+---@param sexString number | string
 ---@return string
 local function GetStringSex(sexString)
     if sexString ~= 1 then

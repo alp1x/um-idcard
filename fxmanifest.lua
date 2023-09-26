@@ -23,13 +23,12 @@ client_script 'main/client.lua'
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
-	'bridge/framework/*.lua',
-	'bridge/inventory/*.lua',
+	'bridge/**/*.lua',
 	'main/server.lua',
 	'main/version.lua',
 }
 
-ui_page "web/index.html"
+ui_page 'web/index.html'
 
 files {
 	'web/index.html',
