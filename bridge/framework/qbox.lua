@@ -1,7 +1,5 @@
 if GetResourceState('qbx_core') ~= 'started' then return end
 
-require '@qbx_core.modules.core'
-
 local metadata = {}
 
 --- Convert sex number to string M or F
@@ -18,7 +16,7 @@ end
 local function GetBadge(src, itemName)
     if not Config.Licenses[itemName].badge then return 'none' end
 
-    local player = QBX.Functions.GetPlayer(src)
+    local player = exports.qbx_core:GetPlayer(src)
     return {
         img = Config.Licenses[itemName].badge,
         grade = player.PlayerData.job.grade.name
@@ -29,7 +27,7 @@ end
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
 local function CreateMetaLicense(src, itemTable)
-    local player = QBX.Functions.GetPlayer(src)
+    local player = exports.qbx_core:GetPlayer(src)
 
     if type(itemTable) == "string" then
         itemTable = {itemTable}
@@ -61,7 +59,7 @@ exports('CreateMetaLicense', CreateMetaLicense)
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
 local function GetMetaLicense(src, itemTable)
-    local player = QBX.Functions.GetPlayer(src)
+    local player = exports.qbx_core:GetPlayer(src)
 
     if type(itemTable) == "string" then
         itemTable = {itemTable}
@@ -92,7 +90,7 @@ exports('GetMetaLicense', GetMetaLicense)
 --- Create metadata for license
 ---@param k string item name
 function CreateRegisterItem(k)
-    QBX.Functions.CreateUseableItem(k, function(source, item)
+    exports.qbx_core:CreateUseableItem(k, function(source, item)
         TriggerEvent('um-idcard:server:sendData', source, item.info or item.metadata)
     end)
 end
