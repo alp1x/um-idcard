@@ -1,40 +1,33 @@
-if GetResourceState('qbx-core') ~= 'started' then return end
-
-QBCore = exports['qbx-core']:GetCoreObject()
+if GetResourceState('qbx_core') ~= 'started' then return end
 
 local metadata = {}
 
 --- Convert sex number to string M or F
----@param sexString number | string 
+---@param sex number
 ---@return string
-local function GetStringSex(sexString)
-    if sexString ~= 1 then
-        sexString = 'M'
-    else
-        sexString = 'F'
-    end
-    return sexString
+local function GetStringSex(sex)
+    return sex == 1 and 'F' or 'M'
 end
 
 --- Get badge for license
 ---@param src number Source number
 ---@param itemName string
 ---@return string | table
-local function GetBadge(src,itemName)
+local function GetBadge(src, itemName)
     if not Config.Licenses[itemName].badge then return 'none' end
-    local Player = QBCore.Functions.GetPlayer(src)
-    local badgeTable = {
+
+    local player = exports.qbx_core:GetPlayer(src)
+    return {
         img = Config.Licenses[itemName].badge,
-        grade = Player.PlayerData.job.grade.name
+        grade = player.PlayerData.job.grade.name
     }
-    return badgeTable
 end
 
 --- Create metadata for license
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
 local function CreateMetaLicense(src, itemTable)
-    local Player = QBCore.Functions.GetPlayer(src)
+    local player = exports.qbx_core:GetPlayer(src)
 
     if type(itemTable) == "string" then
         itemTable = {itemTable}
@@ -44,16 +37,16 @@ local function CreateMetaLicense(src, itemTable)
         for _, v in pairs(itemTable) do
             metadata = {
                 cardtype = v,
-                citizenid = Player.PlayerData.citizenid,
-                firstname = Player.PlayerData.charinfo.firstname,
-                lastname = Player.PlayerData.charinfo.lastname,
-                birthdate = Player.PlayerData.charinfo.birthdate,
-                sex =  GetStringSex(Player.PlayerData.charinfo.gender),
-                nationality = Player.PlayerData.charinfo.nationality,
+                citizenid = player.PlayerData.citizenid,
+                firstname = player.PlayerData.charinfo.firstname,
+                lastname = player.PlayerData.charinfo.lastname,
+                birthdate = player.PlayerData.charinfo.birthdate,
+                sex =  GetStringSex(player.PlayerData.charinfo.gender),
+                nationality = player.PlayerData.charinfo.nationality,
                 mugShot = 'none',
-                badge = GetBadge(src,v)
+                badge = GetBadge(src, v)
             }
-            Player.Functions.AddItem(v, 1, false, metadata)
+            player.Functions.AddItem(v, 1, false, metadata)
         end
     else
         print("Invalid parameter type")
@@ -66,7 +59,7 @@ exports('CreateMetaLicense', CreateMetaLicense)
 ---@param src number Source number
 ---@param itemTable string | table Item name or table of item names
 local function GetMetaLicense(src, itemTable)
-    local Player = QBCore.Functions.GetPlayer(src)
+    local player = exports.qbx_core:GetPlayer(src)
 
     if type(itemTable) == "string" then
         itemTable = {itemTable}
@@ -76,12 +69,12 @@ local function GetMetaLicense(src, itemTable)
         for _, v in pairs(itemTable) do
             metadata = {
                 cardtype = v,
-                citizenid = Player.PlayerData.citizenid,
-                firstname = Player.PlayerData.charinfo.firstname,
-                lastname = Player.PlayerData.charinfo.lastname,
-                birthdate = Player.PlayerData.charinfo.birthdate,
-                sex =  GetStringSex(Player.PlayerData.charinfo.gender),
-                nationality = Player.PlayerData.charinfo.nationality,
+                citizenid = player.PlayerData.citizenid,
+                firstname = player.PlayerData.charinfo.firstname,
+                lastname = player.PlayerData.charinfo.lastname,
+                birthdate = player.PlayerData.charinfo.birthdate,
+                sex =  GetStringSex(player.PlayerData.charinfo.gender),
+                nationality = player.PlayerData.charinfo.nationality,
                 mugShot = 'none',
                 badge = GetBadge(src,v)
             }
@@ -94,11 +87,10 @@ end
 
 exports('GetMetaLicense', GetMetaLicense)
 
-
 --- Create metadata for license
 ---@param k string item name
 function CreateRegisterItem(k)
-    QBCore.Functions.CreateUseableItem(k, function(source, item)
+    exports.qbx_core:CreateUseableItem(k, function(source, item)
         TriggerEvent('um-idcard:server:sendData', source, item.info or item.metadata)
-   end)
+    end)
 end
