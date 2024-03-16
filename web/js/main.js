@@ -50,6 +50,7 @@ const openIdCard = (playerData) => {
     dob: playerData.birthdate,
     sex: playerData.sex,
     nationality: playerData.nationality,
+    uid: playerData.citizenid,
     cardtype: license.header,
   };
 
