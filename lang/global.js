@@ -5,4 +5,5 @@ export const Global = {
     lang_dob: 'Dob',
     lang_sex: 'Sex',
     lang_nat: 'Nationality',
+    lang_uid: 'Personal ID',
 };
