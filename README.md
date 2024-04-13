@@ -36,3 +36,6 @@
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=alp1x/um-idcard&type=Date)](https://star-history.com/#alp1x/um-idcard&Date)
