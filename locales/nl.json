@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Achternaam",
+  "firstname": "Voornaam",
+  "dob": "Geboortedatum",
+  "sex": "Geslacht",
+  "nat": "Nationaliteit",
+  "renew": {
+    "title": "Vernieuwen",
+    "description": "Je identiteitskaart ziet er verouderd uit, we vernieuwen hem."
+  },
+  "update_mugshot": {
+    "title": "Foto bijwerken",
+    "description": "Je foto ziet er verouderd uit, we werken hem bij."
+  },
+  "show_idcard": {
+    "title": "Je hebt je ID-kaart getoond",
+    "description": "Je toont je identiteitskaart aan de dichtstbijzijnde speler."
+  }
+}

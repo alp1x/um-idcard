@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "姓",
+  "firstname": "名",
+  "dob": "出生日期",
+  "sex": "性別",
+  "nat": "國籍",
+  "renew": {
+    "title": "換發",
+    "description": "您的身分證看起來已過期，我們正在為您換發。"
+  },
+  "update_mugshot": {
+    "title": "更新照片",
+    "description": "您的照片看起來已過期，我們正在更新。"
+  },
+  "show_idcard": {
+    "title": "您出示了身分證",
+    "description": "您正在向最近的玩家出示身分證。"
+  }
+}

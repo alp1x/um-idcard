@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Efternamn",
+  "firstname": "Förnamn",
+  "dob": "Födelsedatum",
+  "sex": "Kön",
+  "nat": "Nationalitet",
+  "renew": {
+    "title": "Förnya",
+    "description": "Ditt ID-kort ser föråldrat ut, vi förnyar det."
+  },
+  "update_mugshot": {
+    "title": "Uppdatera foto",
+    "description": "Ditt foto ser föråldrat ut, vi uppdaterar det."
+  },
+  "show_idcard": {
+    "title": "Du visade ditt ID-kort",
+    "description": "Du visar ditt ID-kort för närmaste spelaren."
+  }
+}

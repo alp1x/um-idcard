@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Etternavn",
+  "firstname": "Fornavn",
+  "dob": "Fødselsdato",
+  "sex": "Kjønn",
+  "nat": "Nasjonalitet",
+  "renew": {
+    "title": "Forny",
+    "description": "Legitimasjonen din ser utdatert ut, vi fornyer den."
+  },
+  "update_mugshot": {
+    "title": "Oppdater foto",
+    "description": "Bildet ditt ser utdatert ut, vi oppdaterer det."
+  },
+  "show_idcard": {
+    "title": "Du viste legitimasjonen",
+    "description": "Du viser legitimasjonen din til nærmeste spiller."
+  }
+}

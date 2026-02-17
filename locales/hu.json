@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Vezetéknév",
+  "firstname": "Keresztnév",
+  "dob": "Születési dátum",
+  "sex": "Nem",
+  "nat": "Állampolgárság",
+  "renew": {
+    "title": "Megújítás",
+    "description": "A személyid elavultnak tűnik, megújítjuk."
+  },
+  "update_mugshot": {
+    "title": "Fénykép frissítése",
+    "description": "A fényképed elavultnak tűnik, frissítjük."
+  },
+  "show_idcard": {
+    "title": "Megmutattad a személyidet",
+    "description": "A legközelebbi játékosnak mutatod a személyidet."
+  }
+}

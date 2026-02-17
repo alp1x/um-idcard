@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Mbiemri",
+  "firstname": "Emri",
+  "dob": "Data e lindjes",
+  "sex": "Gjinia",
+  "nat": "Kombësia",
+  "renew": {
+    "title": "Rinovoj",
+    "description": "Letërnjoftimi yt duket i vjetër, po e rinovojmë."
+  },
+  "update_mugshot": {
+    "title": "Përditëso foton",
+    "description": "Fotoja jote duket e vjetër, po e përditësojmë."
+  },
+  "show_idcard": {
+    "title": "Tregove letërnjoftimin",
+    "description": "Po e tregon letërnjoftimin lojtarit më të afërt."
+  }
+}

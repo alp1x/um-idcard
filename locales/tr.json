@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Soyadı",
+  "firstname": "Adı",
+  "dob": "Doğum Tarihi",
+  "sex": "Cinsiyet",
+  "nat": "Uyruk",
+  "renew": {
+    "title": "Yenile",
+    "description": "Kimlik kartınız eski görünüyor, yeniliyoruz."
+  },
+  "update_mugshot": {
+    "title": "Fotoğraf Güncelle",
+    "description": "Fotoğrafınız eski görünüyor, güncelliyoruz."
+  },
+  "show_idcard": {
+    "title": "Kimlik kartını gösterdin",
+    "description": "En yakındaki oyuncuya kimlik kartınızı gösteriyorsunuz."
+  }
+}

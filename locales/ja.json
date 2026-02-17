@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "姓",
+  "firstname": "名",
+  "dob": "生年月日",
+  "sex": "性別",
+  "nat": "国籍",
+  "renew": {
+    "title": "更新",
+    "description": "身分証明書が古いため、更新しています。"
+  },
+  "update_mugshot": {
+    "title": "写真を更新",
+    "description": "写真が古いため、更新しています。"
+  },
+  "show_idcard": {
+    "title": "身分証明書を提示しました",
+    "description": "最も近くにいるプレイヤーに身分証明書を提示しています。"
+  }
+}

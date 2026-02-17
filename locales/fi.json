@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Sukunimi",
+  "firstname": "Etunimi",
+  "dob": "Syntymäaika",
+  "sex": "Sukupuoli",
+  "nat": "Kansalaisuus",
+  "renew": {
+    "title": "Uusi",
+    "description": "Henkilöllisyystodistuksesi näyttää vanhalta, uusimme sen."
+  },
+  "update_mugshot": {
+    "title": "Päivitä kuva",
+    "description": "Kuvasi näyttää vanhalta, päivitämme sen."
+  },
+  "show_idcard": {
+    "title": "Näytit henkilöllisyystodistuksen",
+    "description": "Näytät henkilöllisyystodistuksesi lähimmälle pelaajalle."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Last Name",
+  "firstname": "First Name",
+  "dob": "Dob",
+  "sex": "Sex",
+  "nat": "Nationality",
+  "renew": {
+    "title": "Renew",
+    "description": "Your identity card looks old, we are renewing it."
+  },
+  "update_mugshot": {
+    "title": "Update Mugshot",
+    "description": "Your mugshot looks old, we are updating it."
+  },
+  "show_idcard": {
+    "title": "You showed your idcard",
+    "description": "You are showing your ID Card to the closest player"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Cognome",
+  "firstname": "Nome",
+  "dob": "Data di nascita",
+  "sex": "Sesso",
+  "nat": "Nazionalità",
+  "renew": {
+    "title": "Rinnova",
+    "description": "La tua carta d'identità sembra vecchia, la stiamo rinnovando."
+  },
+  "update_mugshot": {
+    "title": "Aggiorna foto",
+    "description": "La tua foto sembra vecchia, la stiamo aggiornando."
+  },
+  "show_idcard": {
+    "title": "Hai mostrato la carta d'identità",
+    "description": "Stai mostrando la tua carta d'identità al giocatore più vicino."
+  }
+}

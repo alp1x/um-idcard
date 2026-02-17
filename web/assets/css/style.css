@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --card-bg: hsl(0 0% 97%);
+  --card-border: hsl(0 0% 82%);
+  --text-primary: hsl(0 0% 9%);
+  --text-muted: hsl(0 0% 45%);
+  --divider: rgba(0, 0, 0, 0.04);
+  --radius: 14px;
+  --shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  padding-right: 2.5vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════
+   Card
+   ══════════════════════════════════════ */
+#um-idcard {
+  visibility: hidden;
+  position: relative;
+  width: 40vh;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#um-idcard.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Layer 1: Warm crosshatch lines ── */
+#um-idcard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(55deg,
+      rgba(120, 100, 60, 0.04) 0px,
+      rgba(120, 100, 60, 0.04) 1px,
+      transparent 1px,
+      transparent 16px),
+    repeating-linear-gradient(-55deg,
+      rgba(80, 100, 80, 0.035) 0px,
+      rgba(80, 100, 80, 0.035) 1px,
+      transparent 1px,
+      transparent 16px),
+    repeating-linear-gradient(0deg,
+      rgba(100, 80, 60, 0.015) 0px,
+      rgba(100, 80, 60, 0.015) 1px,
+      transparent 1px,
+      transparent 10px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Layer 2: Shapes & watermarks (.card-texture div) ── */
+.card-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+  background:
+    /* Large warm blob - top right */
+    radial-gradient(ellipse 60% 70% at 85% 15%,
+      rgba(160, 140, 80, 0.06) 0%,
+      rgba(140, 120, 70, 0.03) 40%,
+      transparent 70%),
+    /* Green-ish blob - bottom left */
+    radial-gradient(ellipse 70% 60% at 10% 85%,
+      rgba(80, 120, 80, 0.05) 0%,
+      rgba(70, 110, 70, 0.025) 40%,
+      transparent 65%),
+    /* Subtle warm center glow */
+    radial-gradient(ellipse 50% 50% at 50% 50%,
+      rgba(140, 130, 100, 0.03) 0%,
+      transparent 60%);
+}
+
+/* Rosette circle - top right */
+.card-texture::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  right: -10%;
+  width: 65%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%,
+      transparent 28%,
+      rgba(120, 100, 60, 0.035) 29%,
+      transparent 30%,
+      transparent 38%,
+      rgba(100, 120, 80, 0.03) 39%,
+      transparent 40%,
+      transparent 48%,
+      rgba(120, 100, 60, 0.025) 49%,
+      transparent 50%,
+      transparent 58%,
+      rgba(80, 100, 80, 0.02) 59%,
+      transparent 60%,
+      transparent 68%,
+      rgba(120, 110, 70, 0.018) 69%,
+      transparent 70%,
+      transparent 78%,
+      rgba(100, 120, 80, 0.012) 79%,
+      transparent 80%);
+}
+
+/* Wave pattern - bottom left */
+.card-texture::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 80%;
+  height: 60%;
+  background:
+    repeating-radial-gradient(ellipse at 0% 100%,
+      transparent 0px,
+      transparent 14px,
+      rgba(80, 110, 70, 0.025) 14px,
+      rgba(80, 110, 70, 0.025) 15px,
+      transparent 15px,
+      transparent 28px,
+      rgba(120, 100, 60, 0.02) 28px,
+      rgba(120, 100, 60, 0.02) 29px);
+}
+
+/* ══════════════════════════════════════
+   Badge
+   ══════════════════════════════════════ */
+#badge {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--divider);
+  position: relative;
+  z-index: 5;
+}
+
+#badge img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+#badge #badgegrade {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, hsl(0 0% 88%), hsl(0 0% 96%));
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* ══════════════════════════════════════
+   Header
+   ══════════════════════════════════════ */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--divider);
+  position: relative;
+  z-index: 5;
+}
+
+.card-header-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.city-name {
+  font-size: 1.4vh;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-type {
+  font-size: 1.4vh;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-header-text .city-name::after {
+  content: '·';
+  margin-left: 6px;
+  color: var(--text-muted);
+}
+
+/* ══════════════════════════════════════
+   Body
+   ══════════════════════════════════════ */
+.card-body {
+  display: flex;
+  padding: 14px 16px;
+  gap: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+/* ── Photo ── */
+.photo-section {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-section img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  transform-origin: center center;
+}
+
+/* ── Info ── */
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 1.1vh;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.value {
+  font-size: 1.15vh;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════
+   Footer
+   ══════════════════════════════════════ */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 10px;
+  border-top: 1px solid var(--divider);
+  position: relative;
+  z-index: 5;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4vh;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-icons img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.footer-icons #smallmugshot {
+  border-radius: 50%;
+  filter: grayscale(1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Nachname",
+  "firstname": "Vorname",
+  "dob": "Geburtsdatum",
+  "sex": "Geschlecht",
+  "nat": "Nationalität",
+  "renew": {
+    "title": "Erneuern",
+    "description": "Ihr Ausweis wirkt veraltet, wir erneuern ihn."
+  },
+  "update_mugshot": {
+    "title": "Foto aktualisieren",
+    "description": "Ihr Foto wirkt veraltet, wir aktualisieren es."
+  },
+  "show_idcard": {
+    "title": "Ausweis gezeigt",
+    "description": "Sie zeigen Ihren Ausweis dem nächsten Spieler."
+  }
+}

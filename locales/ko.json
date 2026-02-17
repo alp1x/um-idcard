@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "성",
+  "firstname": "이름",
+  "dob": "생년월일",
+  "sex": "성별",
+  "nat": "국적",
+  "renew": {
+    "title": "갱신",
+    "description": "신분증이 오래되어 갱신 중입니다."
+  },
+  "update_mugshot": {
+    "title": "사진 업데이트",
+    "description": "사진이 오래되어 업데이트 중입니다."
+  },
+  "show_idcard": {
+    "title": "신분증을 보여주었습니다",
+    "description": "가장 가까운 플레이어에게 신분증을 보여주고 있습니다."
+  }
+}

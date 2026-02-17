@@ -1,12 +1,25 @@
 if GetResourceState('qs-inventory') ~= 'started' then return end
+
 local Inventory = exports['qs-inventory']
 
-function NewMetaDataLicense(src, itemName)
-    local newMetaDataItem = Inventory:GetItemByName(src, itemName)
-    if newMetaDataItem then
-        local items = Inventory:GetInventory(src)
-        local info = items[newMetaDataItem.slot].info
-        info.mugShot = lib.callback.await('um-idcard:client:callBack:getMugShot', src)
-        Inventory:SetItemMetadata(src, newMetaDataItem.slot, info)
+function setMetaDataInventory(src, item, mugShot)
+    local items = Inventory:GetInventory(src)
+    local info = items[item.slot].info
+
+    info.mugShot = mugShot
+    Inventory:SetItemMetadata(src, item.slot, info)
+end
+
+function addItemInventory(src, itemName, metadata)
+    Inventory:AddItem(src, itemName, 1, false, metadata)
+end
+
+function removeItemInventory(src, itemName, slot)
+    if slot then
+        Inventory:RemoveItem(src, itemName, 1, slot)
+        return
     end
+    local item = Inventory:GetItemByName(src, itemName)
+    if not item then return end
+    Inventory:RemoveItem(src, itemName, 1, item.slot)
 end

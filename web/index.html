@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <div id="um-idcard" class="anim">
-        <div id="badge">
-            <img id="badgeimg" src="">
-            <span id="badgegrade"></span>
-        </div>
-        <div class="header">
-            <span id="lang_header"></span>
-            <span id="cardtype"></span>
-        </div>
-        <div class="content">
-            <div class="icon">
-                <img id="mugshot" src="">
-            </div>
-            <div class="text">
-                <ul>
-                    <li>
-                        <span id="lang_lastname"></span>
-                        <span id="lastname" class="info"></span>
-                    </li>
-                    <li>
-                        <span id="lang_firstname"></span>
-                        <span id="name" class="info"></span>
-                    </li>
-                    <li>
-                        <span id="lang_dob"></span>
-                        <span id="dob" class="info"></span>
-                    </li>
-                    <li>
-                        <span id="lang_sex"></span>
-                        <span id="sex" class="info"></span>
-                    </li>
-                    <li>
-                        <span id="lang_nat"></span>
-                        <span id="nationality" class="info"></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer">
-         <div class="signature">
-            <span id="sign"></span>
-         </div>
-         <div class="flagsandimg">
-            <img id="smallmugshot" src="">
-            <img src="flags/32.png">
-         </div>
-        </div>
+  <div id="um-idcard">
+    <div class="card-texture"></div>
+
+    <div id="badge">
+      <img id="badgeimg" src="" alt="">
+      <span id="badgegrade"></span>
     </div>
-    <script type="module" defer src="js/main.js"></script>
+
+    <div class="card-header">
+      <div class="card-header-text">
+        <span id="lang_header" class="city-name"></span>
+        <span id="cardtype" class="card-type"></span>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="photo-section">
+        <img id="mugshot" src="" alt="">
+      </div>
+
+      <div class="info-section">
+        <div class="info-row">
+          <span id="lang_lastname" class="label"></span>
+          <span id="lastname" class="value"></span>
+        </div>
+        <div class="info-row">
+          <span id="lang_firstname" class="label"></span>
+          <span id="name" class="value"></span>
+        </div>
+        <div class="info-row">
+          <span id="lang_dob" class="label"></span>
+          <span id="dob" class="value"></span>
+        </div>
+        <div class="info-row">
+          <span id="lang_sex" class="label"></span>
+          <span id="sex" class="value"></span>
+        </div>
+        <div class="info-row">
+          <span id="lang_nat" class="label"></span>
+          <span id="nationality" class="value"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <span id="sign" class="signature"></span>
+      <div class="footer-icons">
+        <img id="smallmugshot" src="" alt="">
+        <img src="assets/flags/32.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script defer src="dist/main.js"></script>
 </body>
+
 </html>

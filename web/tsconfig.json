@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "ts",
+    "lib": [
+      "esnext",
+      "DOM",
+      "DOM.Iterable"
+    ]
+  },
+  "include": [
+    "ts/**/*.ts"
+  ]
+}

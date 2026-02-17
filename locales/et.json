@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Perekonnanimi",
+  "firstname": "Eesnimi",
+  "dob": "Sünniaeg",
+  "sex": "Sugu",
+  "nat": "Rahvus",
+  "renew": {
+    "title": "Uuenda",
+    "description": "Sinu isikutunnistus näib vananenud, uuendame seda."
+  },
+  "update_mugshot": {
+    "title": "Uuenda pilti",
+    "description": "Sinu pilt näib vananenud, uuendame seda."
+  },
+  "show_idcard": {
+    "title": "Näitasid isikutunnistust",
+    "description": "Näitad oma isikutunnistust lähimale mängijale."
+  }
+}

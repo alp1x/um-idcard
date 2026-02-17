@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Nazwisko",
+  "firstname": "Imię",
+  "dob": "Data urodzenia",
+  "sex": "Płeć",
+  "nat": "Narodowość",
+  "renew": {
+    "title": "Odnów",
+    "description": "Twój dowód wygląda na przestarzały, odnawiamy go."
+  },
+  "update_mugshot": {
+    "title": "Zaktualizuj zdjęcie",
+    "description": "Twoje zdjęcie wygląda na przestarzałe, aktualizujemy je."
+  },
+  "show_idcard": {
+    "title": "Pokazałeś dowód",
+    "description": "Pokazujesz dowód najbliższemu graczowi."
+  }
+}

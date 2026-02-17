@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Nume",
+  "firstname": "Prenume",
+  "dob": "Data nașterii",
+  "sex": "Sex",
+  "nat": "Naționalitate",
+  "renew": {
+    "title": "Reînnoiește",
+    "description": "Cardul tău de identitate pare vechi, îl reînnoim."
+  },
+  "update_mugshot": {
+    "title": "Actualizează fotografia",
+    "description": "Fotografia ta pare veche, o actualizăm."
+  },
+  "show_idcard": {
+    "title": "Ai arătat cardul de identitate",
+    "description": "Îi arăți cardul de identitate jucătorului cel mai apropiat."
+  }
+}

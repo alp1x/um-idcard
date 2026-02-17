@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Pavardė",
+  "firstname": "Vardas",
+  "dob": "Gimimo data",
+  "sex": "Lytis",
+  "nat": "Tautybė",
+  "renew": {
+    "title": "Atnaujinti",
+    "description": "Jūsų tapatybės kortelė atrodo pasenusi, atnaujiname."
+  },
+  "update_mugshot": {
+    "title": "Atnaujinti nuotrauką",
+    "description": "Jūsų nuotrauka atrodo pasenusi, atnaujiname."
+  },
+  "show_idcard": {
+    "title": "Parodėte tapatybės kortelę",
+    "description": "Rodote tapatybės kortelę artimiausiam žaidėjui."
+  }
+}

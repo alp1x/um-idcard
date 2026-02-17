@@ -1,0 +1,23 @@
+---@class Badge
+---@field img string
+---@field grade string
+
+---@class Metadata
+---@field mugShot string
+---@field cardtype string
+---@field citizenid string
+---@field firstname string
+---@field lastname string
+---@field birthdate string
+---@field sex string
+---@field nationality string
+---@field badge Badge
+
+---@class Item
+---@field name string
+---@field count number
+---@field slot number
+---@field info any
+---@field label string
+---@field weight string
+---@field metadata Metadata

@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Nama Belakang",
+  "firstname": "Nama Depan",
+  "dob": "Tanggal Lahir",
+  "sex": "Jenis Kelamin",
+  "nat": "Kebangsaan",
+  "renew": {
+    "title": "Perpanjang",
+    "description": "Kartu identitas Anda terlihat usang, kami memperbaruinya."
+  },
+  "update_mugshot": {
+    "title": "Perbarui foto",
+    "description": "Foto Anda terlihat usang, kami memperbaruinya."
+  },
+  "show_idcard": {
+    "title": "Anda menunjukkan kartu identitas",
+    "description": "Anda menunjukkan kartu identitas ke pemain terdekat."
+  }
+}

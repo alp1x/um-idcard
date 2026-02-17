@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Prezime",
+  "firstname": "Ime",
+  "dob": "Datum rođenja",
+  "sex": "Spol",
+  "nat": "Nacionalnost",
+  "renew": {
+    "title": "Obnovi",
+    "description": "Vaša iskaznica izgleda zastarjelo, obnavljamo je."
+  },
+  "update_mugshot": {
+    "title": "Ažuriraj fotografiju",
+    "description": "Vaša fotografija izgleda zastarjelo, ažuriramo je."
+  },
+  "show_idcard": {
+    "title": "Pokazali ste iskaznicu",
+    "description": "Pokazujete iskaznicu najbližem igraču."
+  }
+}

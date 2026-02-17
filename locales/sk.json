@@ -1,0 +1,20 @@
+{
+  "header": "Los Santos",
+  "lastname": "Priezvisko",
+  "firstname": "Meno",
+  "dob": "Dátum narodenia",
+  "sex": "Pohlavie",
+  "nat": "Národnosť",
+  "renew": {
+    "title": "Obnoviť",
+    "description": "Váš preukaz vyzerá zastaralo, obnovujeme ho."
+  },
+  "update_mugshot": {
+    "title": "Aktualizovať foto",
+    "description": "Vaša fotka vyzerá zastaralo, aktualizujeme ju."
+  },
+  "show_idcard": {
+    "title": "Ukázali ste preukaz",
+    "description": "Ukazujete preukaz najbližšiemu hráčovi."
+  }
+}
