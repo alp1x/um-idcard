@@ -1,17 +1,29 @@
-# ⚠️ If you are having problems with um-idcard, you can wait for an update or alternatively use the following scripts suggested by um
-* [bl_idcard](https://github.com/Byte-Labs-Studio/bl_idcard)
-* [five_idcard](https://github.com/cinquina/five-idcard)
+<img src="https://r2.fivemanage.com/xAGbYdcTtNkthvTNfzai9/um-idcard.png">
 
-# um-idcard | old (~~qb-idcard~~)
-<sup><b>qb-idcard</b> has been updated and renamed as <b>um-idcard</b>, and it is now compatible with <b>ESX</b> and </b><b>QBCore</b> and <b>Qbox</b></sup> 
-
+# um-idcard
+<sup><b>qb-idcard</b> has been updated and renamed as <b>um-idcard</b>, and it is now compatible with <b>Qbox</b> and </b><b>ESX</b> and <b>QBCore</b></sup> 
 
 ### Setup
-* Make sure you have the items in **Config.Licenses**, otherwise add them.
-* After **[ox_lib](https://github.com/overextended/ox_lib/releases)** and **[MugShotBase64](https://github.com/BaziForYou/MugShotBase64)** 
-* `ensure um-idcard` or `ensure [um] folder`
-* 📄 **[QBCore Starter Setup](https://alp1x.github.io/um-idcard/Starter%20Setup/qbcore)**
-* 📄 **[ESX Starter Setup](https://alp1x.github.io/um-idcard/Starter%20Setup/esx)**
+* Make sure you have the items in **Config.Licenses**, otherwise add them. *(id_card/driver_license etc)*
+* `ensure um-idcard`
+
+### Upload Mugshots
+There are two ways to do this: the first is **local**, i.e., **web/assets/mugshot**; the second is via the **[Fivemanage](https://fivemanage.com/)** path.
+1. **Local (default)**
+* No extra configuration is required; the user's mugshot is saved as a .png file in web/assets/mugshot, 
+but you won't see it immediately. The script needs to be restarted because a new file is being added.
+
+2. **Fivemanage (recommended / free 30GB bandwidth)**
+* open config.lua and mugshotsUpload value replace to **fivemanage**
+```lua
+ mugshotsUpload = 'fivemanage'
+```
+* Log in to **[Fivemanage](https://app.fivemanage.com/login)**
+* Create a token from the Dashboard
+* and add it into server.cfg **``set fivemanage:key "YOUR_TOKEN"``**
+
+### Compatibility (cityhall/giveitem etc.)
+* You don't need to do anything for this, **just use the item.**
 
 ### Usage
 * Just use the item
@@ -21,17 +33,12 @@
 ### How to create a custom identity card?
 * **[um-idcard-maker](https://alp1x.github.io/um-idcard-maker/)**
 
-### How can add an identity card with metadata?
-* **[Exports](https://alp1x.github.io/um-idcard/exports)**
-
 ### Optional
 * **[um-idcard-menu](https://github.com/alp1x/um-idcard-menu)**
 
-### Inventory
-* **[ox_inventory](https://github.com/overextended/ox_inventory/releases)** (ESX or QBCore)
-* **[qb-inventory or lj-inventory ](https://github.com/qbcore-framework/qb-inventory)** (QBCore)
-
-
+### Alternatives
+* **[bl_idcard](https://github.com/Byte-Labs-Studio/bl_idcard)**
+* **[five-idcard](https://github.com/cinquina/five-idcard)**
 
 ## Contributors 
 <a href="https://github.com/alp1x/um-idcard/graphs/contributors">
