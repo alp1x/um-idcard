@@ -5,12 +5,13 @@
 
 ### Setup
 * Make sure you have the items in **Config.Licenses**, otherwise add them. *(id_card/driver_license etc)*
-* `ensure um-idcard`
+* `setr ox:locale "en"` *server.cfg* (al, ar, cs, da, de, el, en, es, et, fi, fr, he, hr, hu, id, it, ja, ko, lt, nl, no, pl, pt, ro, ru, sk, sv, th, tr, zh-cn, zh-tw)
+* `ensure um-idcard`  *server.cfg*
 
 ### Upload Mugshots
-There are two ways to do this: the first is **local**, i.e., **web/assets/mugshot**; the second is via the **[Fivemanage](https://fivemanage.com/)** path.
+There are two ways to do this: the first is **local**, i.e., **web/assets/mugshots**; the second is via the **[Fivemanage](https://fivemanage.com/)** path.
 1. **Local (default)**
-* No extra configuration is required; the user's mugshot is saved as a .png file in web/assets/mugshot, 
+* No extra configuration is required; the user's mugshot is saved as a .png file in web/assets/mugshots, 
 but you won't see it immediately. The script needs to be restarted because a new file is being added.
 
 2. **Fivemanage (recommended / free 30GB bandwidth)**
