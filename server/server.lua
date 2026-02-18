@@ -3,7 +3,7 @@
 function SendIDCardData(src, item)
     local metadata = item?.info or item.metadata
 
-    if not metadata or not next(metadata) then
+    if not (metadata and next(metadata) and metadata?.cardtype) then
         lib.notify(src, {
             title = locale('renew.title'),
             description = locale('renew.description'),

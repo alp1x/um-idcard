@@ -7,7 +7,7 @@ local b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 local resourcePath = GetResourcePath(cache.resource)
 local imagePath = '/web/assets/mugshots'
 
-local MAX_DECODED_BYTES = 20 * 1024 -- 20KB (client'tan gelen base64 güvenlik limiti)
+local MAX_DECODED_BYTES = 20 * 1024 -- 20KB
 local PNG_SIG = '\x89PNG\r\n\x1a\n'
 
 local function base64Decode(data)

@@ -9,7 +9,7 @@ if TOKEN == '' then
     return
 end
 
-local PRESIGNED_URL = 'https://fmapi.net/api/v2/presigned-url?fileType=image'
+local PRESIGNED_URL = 'https://api.fivemanage.com/api/v3/file/presigned-url'
 
 ---@return string|nil presignedUrl
 local function GetPresignedUrl()
