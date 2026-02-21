@@ -5,7 +5,7 @@
 
 ### Setup
 * Make sure you have the items in **Config.Licenses**, otherwise add them. *(id_card/driver_license etc)*
-* `setr ox:locale "en"` *server.cfg* (al, ar, cs, da, de, el, en, es, et, fi, fr, he, hr, hu, id, it, ja, ko, lt, nl, no, pl, pt, ro, ru, sk, sv, th, tr, zh-cn, zh-tw)
+* set your locale `setr ox:locale "en"` *server.cfg* 
 * `ensure um-idcard`  *server.cfg*
 
 ### Upload Mugshots
