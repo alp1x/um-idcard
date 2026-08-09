@@ -50,4 +50,4 @@ but you won't see it immediately. The script needs to be restarted because a new
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=alp1x/um-idcard&type=Date)](https://star-history.com/#alp1x/um-idcard&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=alp1x/um-idcard&type=Date)](https://star-history.dera.page/#alp1x/um-idcard&Date)
